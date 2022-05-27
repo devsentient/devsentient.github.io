@@ -1,0 +1,1540 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.8">
+    
+    
+      
+        <title>Create a pipeline job - Shakudo Platform</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.6e60f8b8.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#create-a-pipeline" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Shakudo Platform" class="md-header__button md-logo" aria-label="Shakudo Platform" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Shakudo Platform
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Create a pipeline job
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Shakudo Platform" class="md-nav__button md-logo" aria-label="Shakudo Platform" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Shakudo Platform
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Getting started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Getting started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Getting started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api.html" class="md-nav__link">
+        Hyperplane API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sandbox.html" class="md-nav__link">
+        Demo/sandbox walkthrough
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example_notebooks.html" class="md-nav__link">
+        Example notebooks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials.html" class="md-nav__link">
+        Tutorials
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="faq.html" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Using ✈️ Shakudo Hyperplane
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Using ✈️ Shakudo Hyperplane" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Using ✈️ Shakudo Hyperplane
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sessions.html" class="md-nav__link">
+        Start a Jupyter instance
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Create a pipeline job
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="create_pipeline.html" class="md-nav__link md-nav__link--active">
+        Create a pipeline job
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-quick-start" class="md-nav__link">
+    1. Quick start
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-organize-code-into-steps" class="md-nav__link">
+    2. Organize code into steps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-pipeline-yaml" class="md-nav__link">
+    3. Pipeline yaml
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-parameters" class="md-nav__link">
+    4. Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jupyter-notebook-step" class="md-nav__link">
+    jupyter notebook step
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-types-of-steps" class="md-nav__link">
+    other types of steps
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-scheduling-chron-jobs" class="md-nav__link">
+    5. Scheduling chron jobs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-specifying-timeouts" class="md-nav__link">
+    6. Specifying timeouts
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Specifying timeouts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global-timeout" class="md-nav__link">
+    Global timeout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#active-timeout" class="md-nav__link">
+    Active timeout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-timeout" class="md-nav__link">
+    Step timeout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maxretries" class="md-nav__link">
+    maxRetries
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-submit-a-job" class="md-nav__link">
+    7. Submit a job
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Submit a job">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-graphql-playground" class="md-nav__link">
+    Using GraphQL playground
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-a-jhub-notebook" class="md-nav__link">
+    In a jhub notebook
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-dashboard" class="md-nav__link">
+    Using the dashboard
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-check-on-pipeline-jobs" class="md-nav__link">
+    8. Check on pipeline jobs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-outputs-and-debugging" class="md-nav__link">
+    9. Outputs and debugging
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-other-output-options" class="md-nav__link">
+    10. Other output options
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Other output options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github-image-upload" class="md-nav__link">
+    Github image upload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slack-notification" class="md-nav__link">
+    Slack notification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eventbridge" class="md-nav__link">
+    EventBridge
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="debug_jobs.html" class="md-nav__link">
+        Debug a pipeline job
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="create_service.html" class="md-nav__link">
+        Create a pipeline service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="image_jobtype_packages.html" class="md-nav__link">
+        Images and jobTypes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="graphql_queries.html" class="md-nav__link">
+        Graphql query examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dask_hyperplane.html" class="md-nav__link">
+        Dask on Shakudo Platform
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ray_hyperplane.html" class="md-nav__link">
+        Ray on Shakudo Platform
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="spark_hyperplane.html" class="md-nav__link">
+        Spark on Shakudo Platform
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="frontend_tools.html" class="md-nav__link">
+        Frontend on Shakudo Platform
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="nlp_hyperplane.html" class="md-nav__link">
+        NLP on Shakudo Platform
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Advanced Guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Advanced Guides" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Dask
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Dask" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Dask
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dask_concepts.html" class="md-nav__link">
+        Working with Dask
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="examples.html" class="md-nav__link">
+        Dask optimization examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="common_issues.html" class="md-nav__link">
+        Common issues
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rapids_on_hyperplane.html" class="md-nav__link">
+        RAPIDS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sas_on_hyperplane.html" class="md-nav__link">
+        SAS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="r_on_hyperplane.html" class="md-nav__link">
+        R
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mlflow_on_hyperplane.md" class="md-nav__link">
+        MLFlow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="triton_serving.html" class="md-nav__link">
+        Triton
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="crypto.html" class="md-nav__link">
+        CCXT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="custom_secret.html" class="md-nav__link">
+        Custom Secrets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="custom_images.html" class="md-nav__link">
+        Custom Images
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pullrequest.html" class="md-nav__link">
+        Jupyterlab Pullrequests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="jwt.html" class="md-nav__link">
+        Trigger Jobs anywhere
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hyperplane_gql_queries.html" class="md-nav__link">
+        Advanced Graphql queries
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Shakudo Platform Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Shakudo Platform Tools" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Shakudo Platform Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ssh_connection.html" class="md-nav__link">
+        Connect to VSCode Remote
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          About
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="About" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          About
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about.html" class="md-nav__link">
+        About Shakudo
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-quick-start" class="md-nav__link">
+    1. Quick start
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-organize-code-into-steps" class="md-nav__link">
+    2. Organize code into steps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-pipeline-yaml" class="md-nav__link">
+    3. Pipeline yaml
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-parameters" class="md-nav__link">
+    4. Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jupyter-notebook-step" class="md-nav__link">
+    jupyter notebook step
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-types-of-steps" class="md-nav__link">
+    other types of steps
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-scheduling-chron-jobs" class="md-nav__link">
+    5. Scheduling chron jobs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-specifying-timeouts" class="md-nav__link">
+    6. Specifying timeouts
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Specifying timeouts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global-timeout" class="md-nav__link">
+    Global timeout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#active-timeout" class="md-nav__link">
+    Active timeout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-timeout" class="md-nav__link">
+    Step timeout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maxretries" class="md-nav__link">
+    maxRetries
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-submit-a-job" class="md-nav__link">
+    7. Submit a job
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Submit a job">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-graphql-playground" class="md-nav__link">
+    Using GraphQL playground
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-a-jhub-notebook" class="md-nav__link">
+    In a jhub notebook
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-dashboard" class="md-nav__link">
+    Using the dashboard
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-check-on-pipeline-jobs" class="md-nav__link">
+    8. Check on pipeline jobs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-outputs-and-debugging" class="md-nav__link">
+    9. Outputs and debugging
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-other-output-options" class="md-nav__link">
+    10. Other output options
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Other output options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github-image-upload" class="md-nav__link">
+    Github image upload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slack-notification" class="md-nav__link">
+    Slack notification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eventbridge" class="md-nav__link">
+    EventBridge
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="create-a-pipeline">Create a pipeline<a class="headerlink" href="#create-a-pipeline" title="Permanent link">&para;</a></h1>
+<p>Pipelines are used to run a sequence of notebooks or python files from beginning to end. Hyperplane enables you to build pipelines from VSCode notebooks, python files, or Jupyter notebooks.</p>
+<p>The main components of each pipeline are the steps, parameters, pipeline YAML, scheduling, saving files, timeouts, submitting and checking jobs with GraphQL, and the outputs. </p>
+<h2 id="1-quick-start">1. Quick start<a class="headerlink" href="#1-quick-start" title="Permanent link">&para;</a></h2>
+<p>To start creating your pipeline with a pre-existing notebook, ensure your notebook can run from beginning to end without errors. Alternatively, if you are using the pipeline to debug your runs, you can skip this step.</p>
+<h2 id="2-organize-code-into-steps">2. Organize code into steps<a class="headerlink" href="#2-organize-code-into-steps" title="Permanent link">&para;</a></h2>
+<p>Hyperplane pipelines enable you to run multiple python scripts and Jupyter notebooks in succession. We recommend separate long-running code into separate files and add them as separate steps in the YAML. </p>
+<h2 id="3-pipeline-yaml">3. Pipeline yaml<a class="headerlink" href="#3-pipeline-yaml" title="Permanent link">&para;</a></h2>
+<p>Create a .yaml file to list your steps. You can start with adding the following template to <code>example_pipeline.yaml</code>:  </p>
+<div class="highlight"><pre><span></span><code>pipeline:
+  name: &quot;Example pipeline&quot;
+  tasks:
+  - name: &quot;First step&quot;
+    type: &quot;jupyter notebook&quot;
+    notebook_path: &quot;notebook_1.ipynb&quot;
+    notebook_output_path: &quot;notebook_1_output.ipynb&quot;
+  - ...
+</code></pre></div>
+<p>You can replace the first step under <code>tasks</code> and add additional tasks following the same notation. </p>
+<p>Add a Jupyter notebook step by adding the following block to your YAML file:
+<div class="highlight"><pre><span></span><code>  - name: &quot;[your_step_name]&quot;
+    type: &quot;jupyter notebook&quot;
+    notebook_path: &quot;[notebook/path/relative/to/top/level/of/repo.ipynb]&quot;
+    notebook_output_path: &quot;[some/notebook_output_name.ipynb]&quot;
+</code></pre></div></p>
+<p>Add a Python/VScode step by adding the following block to your YAML. The script should be runnable with <code>python [py_path]</code>:
+<div class="highlight"><pre><span></span><code>  - name: &quot;[another_step_name]&quot;
+    type: &quot;vscode notebook&quot;
+    py_path: &quot;[py/file/relative/to/top/level/of/repo.py]&quot;
+</code></pre></div></p>
+<p>Add a Javascript step by adding the following block to your YAML. The script should be runnable with <code>node [js_path]</code>:
+<div class="highlight"><pre><span></span><code>  - name: &quot;[another_step_name]&quot;
+    type: &quot;js script&quot;
+    js_path: &quot;[js/file/relative/to/top/level/of/repo.js]&quot;
+</code></pre></div></p>
+<p>Add a bash script step by adding the following block to your YAML. The bash script should be runnable with <code>bash [bash_script_path]</code>:
+<div class="highlight"><pre><span></span><code>  - name: &quot;[another_step_name]&quot;
+    type: &quot;bash script&quot;
+    bash_script_path: &quot;[sh/file/relative/to/top/level/of/repo.sh]&quot;
+</code></pre></div></p>
+<h2 id="4-parameters">4. Parameters<a class="headerlink" href="#4-parameters" title="Permanent link">&para;</a></h2>
+<p>Parameters are useful for experimentation, or when you want to run the same pipeline with different variables. For example, you may want to submit a query multiple times, with different values for your parameters each time.</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">mu</span><span class="kc">tat</span><span class="err">io</span><span class="kc">n</span><span class="w"> </span><span class="err">submi</span><span class="kc">t</span><span class="err">Model</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="err">crea</span><span class="kc">te</span><span class="err">Pipeli</span><span class="kc">ne</span><span class="err">Job</span><span class="w"> </span><span class="err">(da</span><span class="kc">ta</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="err">jobType</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;basic&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="err">pipeli</span><span class="kc">ne</span><span class="err">YamlPa</span><span class="kc">t</span><span class="err">h</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example_pipeline.yaml&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="err">parame</span><span class="kc">ters</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">crea</span><span class="kc">te</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="p">[</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="err">key</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;param1&quot;</span><span class="p">,</span><span class="w"> </span><span class="err">value</span><span class="p">:</span><span class="w">  </span><span class="s2">&quot;value1&quot;</span><span class="p">},</span><span class="w">   </span><span class="err">##</span><span class="w"> </span><span class="err">cha</span><span class="kc">n</span><span class="err">ge</span><span class="w"> </span><span class="kc">t</span><span class="err">hese</span><span class="w"> </span><span class="kc">f</span><span class="err">or</span><span class="w"> </span><span class="err">di</span><span class="kc">fferent</span><span class="w"> </span><span class="err">experime</span><span class="kc">nts</span><span class="w"></span>
+<span class="w">        </span><span class="p">]</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="err">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">      </span><span class="err">id</span><span class="w"> </span>
+<span class="w">      </span><span class="err">ru</span><span class="kc">n</span><span class="err">Id</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="jupyter-notebook-step">jupyter notebook step<a class="headerlink" href="#jupyter-notebook-step" title="Permanent link">&para;</a></h3>
+<p>To prepare your notebooks to receive parameters, tag the notebook cell containing replaceable variables with "parameters" using the cogs on the right. </p>
+<p>Once you submit a query with the <code>parameters</code> field, the pipeline will insert an extra cell containing the parameter values from your job submission query. </p>
+<p>For example, the job submission query above would insert a cell containing <code>param1 = "value1"</code> below the cell tagged with "parameters" in each notebook step in the example_pipeline. </p>
+<h3 id="other-types-of-steps">other types of steps<a class="headerlink" href="#other-types-of-steps" title="Permanent link">&para;</a></h3>
+<p>In Python, Javascript, Bash, or other types of steps (including Jupyter notebooks), parameters can be accessed through environment variables. For example, using the job submission query above, one could access the new frequency parameter with the following line: </p>
+<div class="highlight"><pre><span></span><code><span class="n">freq</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;HYPERPLANE_JOB_PARAMETER_PARAM1&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;HYPERPLANE_JOB_PARAMETER_PARAM1&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;value_x&#39;</span>
+</code></pre></div>
+<h2 id="5-scheduling-chron-jobs">5. Scheduling chron jobs<a class="headerlink" href="#5-scheduling-chron-jobs" title="Permanent link">&para;</a></h2>
+<p>You may schedule your pipeline to run on a schedule, using the <code>schedule</code> field in your query. The scheduling values can be set following standard chron expressions. See <a href="https://crontab.guru/">https://crontab.guru/</a> for examples.  </p>
+<p>The following GraphQL query will run the example_pipeline every 30 minutes. </p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">mu</span><span class="kc">tat</span><span class="err">io</span><span class="kc">n</span><span class="w"> </span><span class="err">submi</span><span class="kc">t</span><span class="err">Model</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="err">crea</span><span class="kc">te</span><span class="err">Pipeli</span><span class="kc">ne</span><span class="err">Job</span><span class="w"> </span><span class="err">(da</span><span class="kc">ta</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="err">jobType</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;basic&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="err">schedule</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;*/30 * * * *&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="err">pipeli</span><span class="kc">ne</span><span class="err">YamlPa</span><span class="kc">t</span><span class="err">h</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example_pipeline.yaml&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="err">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">      </span><span class="err">id</span><span class="w"> </span>
+<span class="w">      </span><span class="err">ru</span><span class="kc">n</span><span class="err">Id</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Note that <code>jobType</code> indicates the image for the job to run. For the complete list please visit the <a href="image_jobtype_packages.html">Image and jobTypes page</a>. </p>
+<h2 id="6-specifying-timeouts">6. Specifying timeouts<a class="headerlink" href="#6-specifying-timeouts" title="Permanent link">&para;</a></h2>
+<p>Shakudo Platform uses three types of timeouts to ensure your pipelines do not stall or run indefinitely. </p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">mu</span><span class="kc">tat</span><span class="err">io</span><span class="kc">n</span><span class="w"> </span><span class="err">submi</span><span class="kc">t</span><span class="err">Model</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="err">crea</span><span class="kc">te</span><span class="err">Pipeli</span><span class="kc">ne</span><span class="err">Job</span><span class="w"> </span><span class="err">(da</span><span class="kc">ta</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="err">jobType</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;basic&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="kc">t</span><span class="err">imeou</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="err">%d</span><span class="p">,</span><span class="w">                                  </span><span class="err">##</span><span class="w"> </span><span class="err">global</span><span class="w"> </span><span class="kc">t</span><span class="err">imeou</span><span class="kc">t</span><span class="w"></span>
+<span class="w">      </span><span class="err">ac</span><span class="kc">t</span><span class="err">iveTimeou</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="err">%d</span><span class="p">,</span><span class="w">                            </span><span class="err">##</span><span class="w"> </span><span class="err">ac</span><span class="kc">t</span><span class="err">ive</span><span class="w"> </span><span class="kc">t</span><span class="err">imeou</span><span class="kc">t</span><span class="w"></span>
+<span class="w">      </span><span class="err">maxRe</span><span class="kc">tr</span><span class="err">ies</span><span class="p">:</span><span class="w"> </span><span class="err">%d</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="err">pipeli</span><span class="kc">ne</span><span class="err">YamlPa</span><span class="kc">t</span><span class="err">h</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example_pipeline.yaml&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="err">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">      </span><span class="err">id</span><span class="w"> </span>
+<span class="w">      </span><span class="err">ru</span><span class="kc">n</span><span class="err">Id</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="global-timeout">Global timeout<a class="headerlink" href="#global-timeout" title="Permanent link">&para;</a></h3>
+<p>The global timeout is the maximum time that the pipeline may run, starting from the moment of job submission. Even if the job is never picked up (due to resource limits or task limits set by your admin team), it will throw a timeout error after this time is reached. Global timeout is set as part of the submission query using the <code>timeout</code> field. </p>
+<h3 id="active-timeout">Active timeout<a class="headerlink" href="#active-timeout" title="Permanent link">&para;</a></h3>
+<p>The active timeout is maximum time that the pipeline may run once it is picked up. Regardless of whether steps remain to be completed, the pipeline will stop when this timeout is reached. Active timeout is set as part of the submission query using the <code>activeTimeout</code> field. </p>
+<h3 id="step-timeout">Step timeout<a class="headerlink" href="#step-timeout" title="Permanent link">&para;</a></h3>
+<p>The step timeout is the amount of time each step can run before being stopped and restarted (for <code>maxRetries</code> number of times, set in the submission query). This value can be set for each step using the <code>timeout</code> value in each step of the pipeline YAML file.<br />
+For example, the following ensures that the step will not run for more than 120 seconds. </p>
+<div class="highlight"><pre><span></span><code>- name: &quot;[your_step_name]&quot;
+  type: &quot;jupyter notebook&quot;
+  notebook_path: &quot;[notebook/path/relative/to/top/level/of/repo.ipynb]&quot;
+  notebook_output_path: &quot;[notebook_output_name].ipynb&quot;
+  timeout: 120
+</code></pre></div>
+<h3 id="maxretries">maxRetries<a class="headerlink" href="#maxretries" title="Permanent link">&para;</a></h3>
+<p>maxRetries specifies the maximum number of attempts to run your pipeline job before returning an error, even if the timeouts are not reached. </p>
+<h2 id="7-submit-a-job">7. Submit a job<a class="headerlink" href="#7-submit-a-job" title="Permanent link">&para;</a></h2>
+<h3 id="using-graphql-playground">Using GraphQL playground<a class="headerlink" href="#using-graphql-playground" title="Permanent link">&para;</a></h3>
+<p>Queries and mutations will autocomplete in the <strong>GraphQL playground</strong>. The query below can be copied and pasted into the GraphQL playground to create a job, provided that your <code>pipelineYamlPath</code> (relative to the top directory of your repo) exists and committed to the branch that's connected to Hyperplane. You can find which branch of the repository is connected to Shakudo Platform on the header of your Shakudo Platform dashboard it indicates which branch of your repository is connected to your Shakudo Platform </p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">mu</span><span class="kc">tat</span><span class="err">io</span><span class="kc">n</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="err">crea</span><span class="kc">te</span><span class="err">Pipeli</span><span class="kc">ne</span><span class="err">Job</span><span class="w"> </span><span class="err">(da</span><span class="kc">ta</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="err">jobType</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;basic&quot;</span><span class="p">,</span><span class="w">                           </span><span class="err">##</span><span class="w"> </span><span class="err">correspo</span><span class="kc">n</span><span class="err">ds</span><span class="w"> </span><span class="kc">t</span><span class="err">o</span><span class="w"> </span><span class="err">job_</span><span class="kc">t</span><span class="err">ype</span><span class="w"> </span><span class="kc">fr</span><span class="err">om</span><span class="w"> </span><span class="err">sec</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="w">      </span><span class="kc">t</span><span class="err">imeou</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="mi">1800</span><span class="p">,</span><span class="w">                              </span><span class="err">##</span><span class="w"> </span><span class="err">global</span><span class="w"> </span><span class="kc">t</span><span class="err">imeou</span><span class="kc">t</span><span class="w"></span>
+<span class="w">      </span><span class="err">pipeli</span><span class="kc">ne</span><span class="err">YamlPa</span><span class="kc">t</span><span class="err">h</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example_pipeline.yaml&quot;</span><span class="p">,</span><span class="w">  </span><span class="err">##</span><span class="w"> </span><span class="err">pa</span><span class="kc">t</span><span class="err">h</span><span class="w"> </span><span class="kc">t</span><span class="err">o</span><span class="w"> </span><span class="err">your</span><span class="w"> </span><span class="err">yaml</span><span class="w"></span>
+<span class="w">      </span><span class="err">parame</span><span class="kc">ters</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">crea</span><span class="kc">te</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="p">[</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="err">key</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;param1&quot;</span><span class="p">,</span><span class="w"> </span><span class="err">value</span><span class="p">:</span><span class="w">  </span><span class="s2">&quot;value1&quot;</span><span class="p">},</span><span class="w">      </span><span class="err">##</span><span class="w"> </span><span class="err">cha</span><span class="kc">n</span><span class="err">ge</span><span class="w"> </span><span class="kc">t</span><span class="err">hese</span><span class="w"> </span><span class="kc">f</span><span class="err">or</span><span class="w"> </span><span class="err">di</span><span class="kc">fferent</span><span class="w"> </span><span class="err">experime</span><span class="kc">nts</span><span class="w"></span>
+<span class="w">        </span><span class="p">]</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="err">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">      </span><span class="err">id</span><span class="w"> </span>
+<span class="w">      </span><span class="err">ru</span><span class="kc">n</span><span class="err">Id</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="in-a-jhub-notebook">In a jhub notebook<a class="headerlink" href="#in-a-jhub-notebook" title="Permanent link">&para;</a></h3>
+<p>Use the following inside a notebook cell or Python script to submit a job</p>
+<div class="highlight"><pre><span></span><code>  <span class="n">gql_query</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">    mutation submitModel { </span>
+<span class="s1">      createPipelineJob (data: {</span>
+<span class="s1">        jobType: &quot;basic&quot;,</span>
+<span class="s1">        timeout: </span><span class="si">%d</span><span class="s1">,</span>
+<span class="s1">        activeTimeout: </span><span class="si">%d</span><span class="s1">,</span>
+<span class="s1">        maxRetries: </span><span class="si">%d</span><span class="s1">,</span>
+<span class="s1">        pipelineYamlPath: &quot;example_pipeline.yaml&quot;,</span>
+<span class="s1">        parentJob: {connect: {id: &quot;notebook&quot;}},</span>
+<span class="s1">        parameters: {</span>
+<span class="s1">          create: [</span>
+<span class="s1">            {key: &quot;model_of_interest&quot;, value: &quot;</span><span class="si">%s</span><span class="s1">&quot;},</span>
+<span class="s1">          ]</span>
+<span class="s1">        }</span>
+<span class="s1">      }) { </span>
+<span class="s1">        id </span>
+<span class="s1">        runId</span>
+<span class="s1">      } </span>
+<span class="s1">    }</span>
+<span class="s1">    &#39;&#39;&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">timeout</span><span class="p">,</span> <span class="n">a_timeout</span><span class="p">,</span> \
+    <span class="n">max_retries</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">model_of_interest</span><span class="p">)</span>
+  <span class="n">gql_queries</span> <span class="o">=</span> <span class="p">[</span><span class="n">gql_querie</span><span class="p">]</span>
+  <span class="n">results</span> <span class="o">=</span> <span class="k">await</span> <span class="n">nc</span><span class="o">.</span><span class="n">graphql_operation</span><span class="p">(</span><span class="n">gql_queries</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="using-the-dashboard">Using the dashboard<a class="headerlink" href="#using-the-dashboard" title="Permanent link">&para;</a></h3>
+<p>Go to the <strong>Jobs</strong> tab
+<img alt="jobs tab on dashboard" src="images/jobs_tab.png" title="jobs tab on dashboard" /></p>
+<p>Add your YAML file, parameters, timeouts, and retries as normal. 
+<img alt="create a job on dashboard" src="images/create_job.png" title="create a job on dashboard" /></p>
+<p>You can see how to create a pipeline in the this short video</p>
+<div style="position: relative; padding-bottom: 46.875%; height: 0;"><iframe src="https://www.loom.com/embed/f9df6153d2dc4a0fb608e76dd118ab8a" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+<h2 id="8-check-on-pipeline-jobs">8. Check on pipeline jobs<a class="headerlink" href="#8-check-on-pipeline-jobs" title="Permanent link">&para;</a></h2>
+<p>You can check your jobs using the Shakudo Platform dashboard, or with the following simple query in GraphQL playground:
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">query</span><span class="w"> </span><span class="err">checkJob</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="err">pipeli</span><span class="kc">ne</span><span class="err">Job(where</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;your-job-id&quot;</span><span class="p">}</span><span class="err">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="err">id</span><span class="w"></span>
+<span class="w">      </span><span class="err">s</span><span class="kc">tatus</span><span class="w"></span>
+<span class="w">      </span><span class="err">s</span><span class="kc">tart</span><span class="err">Time</span><span class="w"></span>
+<span class="w">      </span><span class="err">ou</span><span class="kc">t</span><span class="err">pu</span><span class="kc">t</span><span class="err">No</span><span class="kc">te</span><span class="err">booksPa</span><span class="kc">t</span><span class="err">h</span><span class="w"></span>
+<span class="w">      </span><span class="err">s</span><span class="kc">tatus</span><span class="err">Reaso</span><span class="kc">n</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+</code></pre></div></p>
+<p><code>Pending</code>: the job is waiting to be started<br />
+<code>In progress</code>: the job is running<br />
+<code>Done</code>: the job is finished</p>
+<p>Any other status means the run was not successful; refer to the statusReason field to see why the pipeline job failed. </p>
+<h2 id="9-outputs-and-debugging">9. Outputs and debugging<a class="headerlink" href="#9-outputs-and-debugging" title="Permanent link">&para;</a></h2>
+<p>You will notice that the status query above also returns an output path. Each Jupyter notebook step (including outputs from running the cells) will be stored at the value of outputNotebooksPath. You can download the notebook and run it on your Jupyter instance to debug if necessary. For Python/VSCode notebooks, all stdouts will also be saved in an output .txt file. </p>
+<h2 id="10-other-output-options">10. Other output options<a class="headerlink" href="#10-other-output-options" title="Permanent link">&para;</a></h2>
+<h3 id="github-image-upload">Github image upload<a class="headerlink" href="#github-image-upload" title="Permanent link">&para;</a></h3>
+<p>If it is more convenient for your workflow, Shakudo Platform provides an example BASH script to upload graphs and other visual output directly to GitHub. It may be used as is or customized to your liking. <a href="git_image_upload.html">See here</a> for the relevant documentation.</p>
+<h3 id="slack-notification">Slack notification<a class="headerlink" href="#slack-notification" title="Permanent link">&para;</a></h3>
+<p>Shakudo's Hyperplane Python package includes a function allowing jobs to post messages to your Slack channel. You can use this to notify you of finished jobs, or even to post job results. <a href="api.html#slack-helper-class">See here</a> for the relevant documentation.</p>
+<h3 id="eventbridge">EventBridge<a class="headerlink" href="#eventbridge" title="Permanent link">&para;</a></h3>
+<p>If you prefer to use Amazon EventBridge, we provide convenience functions at multiple levels of abstraction allowing you to easily forward data into that service ecosystem. <a href="eventbridge.html">See here</a> for more information. </p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="sessions.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Start a Jupyter instance" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Start a Jupyter instance
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="debug_jobs.html" class="md-footer__link md-footer__link--next" aria-label="Next: Debug a pipeline job" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Debug a pipeline job
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.sections"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    
+    
+      <script src="assets/javascripts/bundle.960e086b.min.js"></script>
+      
+    
+  </body>
+</html>

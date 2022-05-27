@@ -13,7 +13,7 @@
     
     
       
-        <title>Overview - Shakudo Platform</title>
+        <title>Trigger Jobs anywhere - Shakudo Platform</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#shakudo-platform" class="md-skip">
+        <a href="#trigger-jobs-anywhere" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Trigger Jobs anywhere
             
           </span>
         </div>
@@ -177,16 +177,14 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
       
       
       
@@ -207,59 +205,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Overview
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         Overview
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#shakudo-platform-core-components" class="md-nav__link">
-    Shakudo Platform Core Components
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shakudo-platform-integrations" class="md-nav__link">
-    Shakudo Platform Integrations
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -537,14 +487,16 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -766,11 +718,66 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="jwt.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Trigger Jobs anywhere
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="jwt.html" class="md-nav__link md-nav__link--active">
         Trigger Jobs anywhere
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#an-example" class="md-nav__link">
+    An example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extension" class="md-nav__link">
+    Extension
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -923,15 +930,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#shakudo-platform-core-components" class="md-nav__link">
-    Shakudo Platform Core Components
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#shakudo-platform-integrations" class="md-nav__link">
-    Shakudo Platform Integrations
+  <a href="#an-example" class="md-nav__link">
+    An example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extension" class="md-nav__link">
+    Extension
   </a>
   
 </li>
@@ -949,27 +963,83 @@
               
                 
 
-<h1 id="shakudo-platform">Shakudo Platform<a class="headerlink" href="#shakudo-platform" title="Permanent link">&para;</a></h1>
-<p>Shakudo Platform is an end-to-end platform for model development, inference, and serving with build-in infrastructure support. On Shakudo Platform, scientists can focus on iterating models and algorithms with the seamless workflow from ideation to production and work with data at scale with fully integrated distributed frameworkes such as <a href="dask_hyperplane.html">DASK</a>, Ray and Spark. </p>
-<h2 id="shakudo-platform-core-components">Shakudo Platform Core Components<a class="headerlink" href="#shakudo-platform-core-components" title="Permanent link">&para;</a></h2>
-<p>Shakudo Platform enables scientists to scale and take code to production without engineering overhead with the following core components. </p>
-<ul>
-<li><a href="dask_concepts.html"><strong>Hyperplane</strong>: Simple APIs for distributed DASK, job management, and alerting</a></li>
-<li><a href="sandbox.html"><strong>Sessions</strong>: A Jupyter environment with multi-CPU/GPU support and VSCode integration</a></li>
-<li><a href="create_pipeline.html"><strong>Shakudo Platform Jobs</strong>: Turn Jupyter notebooks and scripts into pipeline jobs</a></li>
-<li><a href="create_service.html"><strong>Shakudo Platform Services</strong>: Serve Jupyter notebooks and scripts as a pipeline job</a></li>
-<li><a href="triton_serving.html"><strong>Shakudo Platform Triton serving</strong>: Model serving at scale with NVIDIA Triton</a></li>
-</ul>
-<h2 id="shakudo-platform-integrations">Shakudo Platform Integrations<a class="headerlink" href="#shakudo-platform-integrations" title="Permanent link">&para;</a></h2>
-<p>In addition to the core components, Shakudo Platform has a growing list of intergations of popular tools. To request an integration, please create an issue to the <a href="https://github.com/devsentient/examples">github repo</a>. </p>
-<ul>
-<li><a href="mlflow_on_hyperplane.md"><strong>MLFLow</strong>: model tracking and monitoring</a></li>
-<li><a href="hyperplane_gql_queries.html"><strong>GraphQL Playground</strong>: Job management with GraphQL</a></li>
-<li><a href="rapids_on_hyperplane.html"><strong>RAPIDS</strong>: Accelerated data science with GPU</a></li>
-<li><a href="dask_hyperplane.html"><strong>Dask</strong>: Parallel computing in python</a></li>
-<li><a href="ray_hyperplane.html"><strong>RAY</strong>: Scale any python work load with full support of deep learning</a></li>
-<li><a href="spark_hyperplane.html"><strong>Spark</strong>: A unified analytics engine for large-scale data processing.</a></li>
-</ul>
+<h1 id="trigger-jobs-anywhere">Trigger Jobs Anywhere<a class="headerlink" href="#trigger-jobs-anywhere" title="Permanent link">&para;</a></h1>
+<p>Shakudo Platform provide GraphQL queries to submit a job. With a JSON Web Token (<a href="https://en.wikipedia.org/wiki/JSON_Web_Token">JWT</a>), one can submit jobs outside of the Shakudo Platform Platform, for example within your Air Flow pipeline or from the frontend of another product. </p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>Before you can trigger jobs outside of Shakudo Platform, we'll need to enable JWT on your Shakudo Platform; simply notify us and obtain the user name and password from the Shakudo support channel.  </p>
+<h2 id="an-example">An example<a class="headerlink" href="#an-example" title="Permanent link">&para;</a></h2>
+<p>Below is a sample script that submit a job using JWT outside of Shakudo Platform. You can try it out with the following steps:
+1. Saving it as a Python script locally, for example <code>~/Downloads/my_queries.py</code>. 
+2. On your terminal of your local machine run <code>python my_queries.py</code>, remember to change the placeholders in the code to approximate values. <code>my_user_name</code> and <code>my_password</code> can be obtained are your JWT credentials and <code>path_to_your_yaml</code> should be an existing yaml path in your repository.
+3. If successful the code will return a job_id of the new job, if fail it'll return the error details
+4. (optional) Go to the jobs pannel on the Shakudo Platform dashboard and find the newly submmited job with the returned <code>job_id</code>. </p>
+<div class="highlight"><pre><span></span><code><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Run this script outside of Shakudo Platform</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">requests.exceptions</span> <span class="kn">import</span> <span class="n">HTTPError</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">def</span> <span class="nf">get_token</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    function to generate JWT token</span>
+<span class="sd">    &quot;&quot;&quot;</span>    
+    <span class="n">token_endpoint</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://</span><span class="si">{</span><span class="n">HYPERPLANE_DOMAIN</span><span class="si">}</span><span class="s2">/auth/realms/Hyperplane/protocol/openid-connect/token&quot;</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/x-www-form-urlencoded&quot;</span><span class="p">}</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+         <span class="s2">&quot;grant_type&quot;</span><span class="p">:</span> <span class="s2">&quot;password&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;my_user_name&quot;</span><span class="p">,</span>  <span class="c1">##  obtain this from shakudo team </span>
+         <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;my_password&quot;</span><span class="p">,</span>   <span class="c1">##  obtain this from shakudo team </span>
+         <span class="s2">&quot;client_id&quot;</span><span class="p">:</span> <span class="s2">&quot;istio&quot;</span>   
+    <span class="p">}</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">token_endpoint</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+        <span class="n">token</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="s1">&#39;access_token&#39;</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;token obtained&#39;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">HTTPError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">SystemExit</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">token</span>
+
+<span class="c1">## An example GraphQL query that submits a job. Can replace it with any GraphQL query</span>
+
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        mutation submitModelPipeline { </span>
+<span class="s2">            createPipelineJob (data: {</span>
+<span class="s2">            jobName: &quot;sample_job&quot;,</span>
+<span class="s2">            jobType: &quot;basic&quot;,</span>
+<span class="s2">            timeout: 3600,</span>
+<span class="s2">            activeTimeout: 3600,</span>
+<span class="s2">            maxRetries: 2,</span>
+<span class="s2">            pipelineYamlPath: &quot;path_to_your_yaml.yml&quot;,</span>
+<span class="s2">            customTrigger: &quot;&quot;</span>
+<span class="s2">            debuggable: false,</span>
+<span class="s2">            parameters: { create: [</span>
+<span class="s2">                ]}  </span>
+<span class="s2">            }) { </span>
+<span class="s2">                id </span>
+<span class="s2">                status</span>
+<span class="s2">            } </span>
+<span class="s2">        }       </span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">accessToken</span> <span class="o">=</span> <span class="n">get_token</span><span class="p">()</span>
+    <span class="n">endpoint</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://</span><span class="si">{</span><span class="n">HYPERPLANE_DOMAIN</span><span class="si">}</span><span class="s2">/graphql&quot;</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Authorization&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Bearer </span><span class="si">{</span><span class="n">accessToken</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">}</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">endpoint</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="n">query</span><span class="p">},</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span> 
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;query submitted sucessfully </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">(),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+    <span class="k">except</span> <span class="n">HTTPError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Query failed to run with a </span><span class="si">{</span><span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="extension">Extension<a class="headerlink" href="#extension" title="Permanent link">&para;</a></h2>
+<p>This script can be modified to submit any Shakudo Platform GraphQL queries by replacing the <code>query</code> string. Read more on available <a href="graphql_queries.html">GraphQL queries on Shakudo Platform</a> and try them out in the GraphQL playground, which is accessible through the Shakudo Platform Dashboard at <code>https://[your_shakudo_name].hyperplane.dev/graphql</code> </p>
 
               
             </article>
@@ -982,15 +1052,30 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
+        
+        <a href="pullrequest.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Jupyterlab Pullrequests" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Jupyterlab Pullrequests
+            </div>
+          </div>
+        </a>
+      
       
         
-        <a href="api.html" class="md-footer__link md-footer__link--next" aria-label="Next: Hyperplane API" rel="next">
+        <a href="hyperplane_gql_queries.html" class="md-footer__link md-footer__link--next" aria-label="Next: Advanced Graphql queries" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Hyperplane API
+              Advanced Graphql queries
             </div>
           </div>
           <div class="md-footer__button md-icon">

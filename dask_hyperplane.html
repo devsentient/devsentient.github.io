@@ -13,7 +13,7 @@
     
     
       
-        <title>Overview - Shakudo Platform</title>
+        <title>Dask on Shakudo Platform - Shakudo Platform</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#shakudo-platform" class="md-skip">
+        <a href="#working-with-dask" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Dask on Shakudo Platform
             
           </span>
         </div>
@@ -177,16 +177,14 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
       
       
       
@@ -207,59 +205,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Overview
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         Overview
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#shakudo-platform-core-components" class="md-nav__link">
-    Shakudo Platform Core Components
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shakudo-platform-integrations" class="md-nav__link">
-    Shakudo Platform Integrations
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -347,14 +297,16 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -459,11 +411,79 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="dask_hyperplane.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Dask on Shakudo Platform
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="dask_hyperplane.html" class="md-nav__link md-nav__link--active">
         Dask on Shakudo Platform
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#initializing-a-dask-cluster" class="md-nav__link">
+    Initializing a Dask cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-a-cluster-config" class="md-nav__link">
+    Choosing a cluster config
+  </a>
+  
+    <nav class="md-nav" aria-label="Choosing a cluster config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes-about-choosing-workers-and-specs" class="md-nav__link">
+    Notes about choosing workers and specs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worker-freeze-policies" class="md-nav__link">
+    Worker freeze policies
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -923,16 +943,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#shakudo-platform-core-components" class="md-nav__link">
-    Shakudo Platform Core Components
+  <a href="#initializing-a-dask-cluster" class="md-nav__link">
+    Initializing a Dask cluster
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#shakudo-platform-integrations" class="md-nav__link">
-    Shakudo Platform Integrations
+  <a href="#choosing-a-cluster-config" class="md-nav__link">
+    Choosing a cluster config
   </a>
+  
+    <nav class="md-nav" aria-label="Choosing a cluster config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes-about-choosing-workers-and-specs" class="md-nav__link">
+    Notes about choosing workers and specs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worker-freeze-policies" class="md-nav__link">
+    Worker freeze policies
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -949,27 +989,82 @@
               
                 
 
-<h1 id="shakudo-platform">Shakudo Platform<a class="headerlink" href="#shakudo-platform" title="Permanent link">&para;</a></h1>
-<p>Shakudo Platform is an end-to-end platform for model development, inference, and serving with build-in infrastructure support. On Shakudo Platform, scientists can focus on iterating models and algorithms with the seamless workflow from ideation to production and work with data at scale with fully integrated distributed frameworkes such as <a href="dask_hyperplane.html">DASK</a>, Ray and Spark. </p>
-<h2 id="shakudo-platform-core-components">Shakudo Platform Core Components<a class="headerlink" href="#shakudo-platform-core-components" title="Permanent link">&para;</a></h2>
-<p>Shakudo Platform enables scientists to scale and take code to production without engineering overhead with the following core components. </p>
+<h1 id="working-with-dask">Working with Dask<a class="headerlink" href="#working-with-dask" title="Permanent link">&para;</a></h1>
+<h2 id="initializing-a-dask-cluster">Initializing a Dask cluster<a class="headerlink" href="#initializing-a-dask-cluster" title="Permanent link">&para;</a></h2>
+<p>Quickstart a distributed Dask cluster using the following. </p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">hyperplane.notebook_common</span> <span class="kn">import</span> <span class="n">quickstart_dask</span>
+<span class="n">ray_cluster</span> <span class="o">=</span> <span class="n">quickstart_dask</span><span class="p">(</span>
+    <span class="n">num_workers</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> 
+    <span class="n">size</span> <span class="o">=</span> <span class="s1">&#39;hyperplane-med-high-mem&#39;</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Initialize a distributed Dask cluster with ease using the following:
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">hyperplane</span> <span class="kn">import</span> <span class="n">notebook_common</span> <span class="k">as</span> <span class="n">nc</span>
+<span class="n">client</span><span class="p">,</span> <span class="n">cluster</span> <span class="o">=</span> <span class="n">nc</span><span class="o">.</span><span class="n">initialize_cluster</span><span class="p">(</span>
+  <span class="n">num_workers</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+  <span class="n">nthreads</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+  <span class="n">nprocs</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span>
+  <span class="n">ram_gb_per_proc</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span>
+  <span class="n">cores_per_worker</span><span class="o">=</span><span class="mi">15</span>
+<span class="p">)</span>
+</code></pre></div></p>
+<p>Initialize a distributed Dask cluster with Dask defaults using the following:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">hyperplane</span> <span class="kn">import</span> <span class="n">notebook_common</span> <span class="k">as</span> <span class="n">nc</span>
+<span class="n">client</span><span class="p">,</span> <span class="n">cluster</span> <span class="o">=</span> <span class="n">nc</span><span class="o">.</span><span class="n">initialize_dask_cluster</span><span class="p">(</span>
+  <span class="n">num_workers</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> 
+  <span class="n">total_cores_per_worker</span> <span class="o">=</span> <span class="mi">15</span><span class="p">,</span>
+  <span class="n">total_ram_per_worker</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="p">)</span>
+</code></pre></div>
+<h2 id="choosing-a-cluster-config">Choosing a cluster config<a class="headerlink" href="#choosing-a-cluster-config" title="Permanent link">&para;</a></h2>
+<p>Shakudo Platform currently comes with nine pre-configured worker pools:</p>
 <ul>
-<li><a href="dask_concepts.html"><strong>Hyperplane</strong>: Simple APIs for distributed DASK, job management, and alerting</a></li>
-<li><a href="sandbox.html"><strong>Sessions</strong>: A Jupyter environment with multi-CPU/GPU support and VSCode integration</a></li>
-<li><a href="create_pipeline.html"><strong>Shakudo Platform Jobs</strong>: Turn Jupyter notebooks and scripts into pipeline jobs</a></li>
-<li><a href="create_service.html"><strong>Shakudo Platform Services</strong>: Serve Jupyter notebooks and scripts as a pipeline job</a></li>
-<li><a href="triton_serving.html"><strong>Shakudo Platform Triton serving</strong>: Model serving at scale with NVIDIA Triton</a></li>
+<li>'hyperplane-xs-high-mem' (POOL_4_32) with 3.5 allocatable cores, and 27.0 allocatable ram</li>
+<li>'hyperplane-small' (POOL_8_8) with 7.0 allocatable cores, and 5.0 allocatable ram</li>
+<li>'hyperplane-small-mid-mem' (POOL_8_16) with 7.5 allocatable cores, and 12.0 allocatable ram</li>
+<li>'hyperplane-small-high-mem' (POOL_8_64) with 7.5 allocatable cores, and 58.0 allocatable ram</li>
+<li>'hyperplane-med' (POOL_16_16) with 15.0 allocatable cores, and 12.0 allocatable ram</li>
+<li>'hyperplane-med-mid-mem' (POOL_16_32) with 15.0 allocatable cores, and 27.0 allocatable ram</li>
+<li>'hyperplane-med-high-mem' (POOL_16_128) with 15.0 allocatable cores, and 110.0 allocatable ram</li>
+<li>'hyperplane-large' (POOL_32_32) with 28.0 allocatable cores, and 27.0 allocatable ram</li>
+<li>'hyperplane-xxl-high-mem' (POOL_96_768) with 94.0 allocatable cores, and 675.0 allocatable ram</li>
 </ul>
-<h2 id="shakudo-platform-integrations">Shakudo Platform Integrations<a class="headerlink" href="#shakudo-platform-integrations" title="Permanent link">&para;</a></h2>
-<p>In addition to the core components, Shakudo Platform has a growing list of intergations of popular tools. To request an integration, please create an issue to the <a href="https://github.com/devsentient/examples">github repo</a>. </p>
+<p>Once you specify your number of cores and memory, Shakudo Platform will automatically choose the most appropriate pool from the above. You can also choose one of the above with the <code>quickstart_ray</code> function. </p>
+<p>If you are aiming for a specific pool, ensure your <code>nprocs * nthreads</code> &lt;= <code>cores_per_worker</code> &lt;= the number of allocatable cores and <code>nprocs * ram_gb_per_proc</code> &lt;= allocatable ram. For example, if you would like to use a DASK_POOL_16_16 worker, you may want to choose the following cluster initalization </p>
+<div class="highlight"><pre><span></span><code><span class="n">nprocs</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">nthreads</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">ram_gb_per_proc</span> <span class="o">=</span> <span class="mf">2.4</span>
+</code></pre></div>
+<h3 id="notes-about-choosing-workers-and-specs">Notes about choosing workers and specs<a class="headerlink" href="#notes-about-choosing-workers-and-specs" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="mlflow_on_hyperplane.md"><strong>MLFLow</strong>: model tracking and monitoring</a></li>
-<li><a href="hyperplane_gql_queries.html"><strong>GraphQL Playground</strong>: Job management with GraphQL</a></li>
-<li><a href="rapids_on_hyperplane.html"><strong>RAPIDS</strong>: Accelerated data science with GPU</a></li>
-<li><a href="dask_hyperplane.html"><strong>Dask</strong>: Parallel computing in python</a></li>
-<li><a href="ray_hyperplane.html"><strong>RAY</strong>: Scale any python work load with full support of deep learning</a></li>
-<li><a href="spark_hyperplane.html"><strong>Spark</strong>: A unified analytics engine for large-scale data processing.</a></li>
+<li>
+<p>A stable setup for jobs with aggregation (data transfer) is one with a minimum of 10x of the data size. Worker memory usage is about 10% initially. If at any point any worker’s memory usage exceeds 75%, the job is very likely to fail (see <a href="#worker-freeze-policies">Worker freeze policies</a>).</p>
+</li>
+<li>
+<p>If a job consists of only parallel-friendly operations (no sorting, shuffling, or moving large chunks of data), use more CPU (for example <code>16_16</code>, <code>32_32</code>). Otherwise use more memory (for example <code>16_128</code>).</p>
+</li>
+<li>
+<p>If a job requires both huge data and a large number of tasks, split it into multiple jobs to avoid errors. For example, an optimized setting for 1TB group-by job is to split into 10 pieces (100GB each) and use 24 of <code>32_32</code> nodes. You can further convert the piece indicator to a parameter like <code>chunk_id</code> and convert the code into a pipeline job, then run 10 pipeline jobs concurrently to save more time.</p>
+</li>
 </ul>
+<p>Use the steps below to estimate how many nodes and workers you will need:</p>
+<ol>
+<li>Check data size (uncompressed). For example, 100GB</li>
+<li>Choose operation type to find a multiplier of memory: light (x4), medium (x8), heavy(x48). Multiply your data size from step 1 by this multiplier. For example, a group-by will be medium, which requires 100G x 8 ~ 800GB total memory</li>
+<li>Use the number of tasks (heavy vs. light) to determine the number of nodes. If the sequence of operations has many tasks, (computationally heavy), use <code>32_32</code>. Otherwise use <code>16_128</code>. Multiply your required memory from step 2 by 32 or 128 depending on computation load. For example, 800GB/32GB = 25 nodes, or 800GB/128GB = 8 of <code>16_128</code> nodes. </li>
+</ol>
+<p>At this point, you should have an approximate Dask pool spec and number of workers. </p>
+<p>Add-on step: Setup automatic retry if in pipeline mode. Sometimes pipelines error out when spinning up nodes, or HTTP error, canceled error. These can be fixed by retrying.</p>
+<h3 id="worker-freeze-policies">Worker freeze policies<a class="headerlink" href="#worker-freeze-policies" title="Permanent link">&para;</a></h3>
+<p>Below are the defaults for worker memory limits and actions to avoid memory blowup.</p>
+<div class="highlight"><pre><span></span><code>distributed:
+  worker:
+    memory:
+      target: 0.60  # target fraction to stay below
+      spill: 0.70  # fraction at which we spill to disk
+      pause: 0.80  # fraction at which we pause worker threads
+      terminate: 0.95  # fraction at which we terminate the worker
+</code></pre></div>
 
               
             </article>
@@ -982,15 +1077,30 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
+        
+        <a href="graphql_queries.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Graphql query examples" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Graphql query examples
+            </div>
+          </div>
+        </a>
+      
       
         
-        <a href="api.html" class="md-footer__link md-footer__link--next" aria-label="Next: Hyperplane API" rel="next">
+        <a href="ray_hyperplane.html" class="md-footer__link md-footer__link--next" aria-label="Next: Ray on Shakudo Platform" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Hyperplane API
+              Ray on Shakudo Platform
             </div>
           </div>
           <div class="md-footer__button md-icon">

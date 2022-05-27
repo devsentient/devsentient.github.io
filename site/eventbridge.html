@@ -13,7 +13,7 @@
     
     
       
-        <title>Overview - Shakudo Platform</title>
+        <title>Submitting Data to EventBridge - Shakudo Platform</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#shakudo-platform" class="md-skip">
+        <a href="#submitting-data-to-eventbridge" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Submitting Data to EventBridge
             
           </span>
         </div>
@@ -177,16 +177,14 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
       
       
       
@@ -207,59 +205,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Overview
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         Overview
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#shakudo-platform-core-components" class="md-nav__link">
-    Shakudo Platform Core Components
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shakudo-platform-integrations" class="md-nav__link">
-    Shakudo Platform Integrations
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -923,16 +873,82 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#shakudo-platform-core-components" class="md-nav__link">
-    Shakudo Platform Core Components
+  <a href="#manually-specify-event-parameters" class="md-nav__link">
+    Manually specify event parameters
   </a>
+  
+    <nav class="md-nav" aria-label="Manually specify event parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#shakudo-platform-integrations" class="md-nav__link">
-    Shakudo Platform Integrations
+  <a href="#create-an-event-from-csv-and-metadata-files" class="md-nav__link">
+    Create an event from CSV and metadata Files
   </a>
+  
+    <nav class="md-nav" aria-label="Create an event from CSV and metadata Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_1" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#per-client-custom-pre-processor" class="md-nav__link">
+    Per-client custom pre-processor
+  </a>
+  
+    <nav class="md-nav" aria-label="Per-client custom pre-processor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_2" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manual-authorization-config" class="md-nav__link">
+    Manual Authorization Config
+  </a>
+  
+    <nav class="md-nav" aria-label="Manual Authorization Config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_3" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -949,26 +965,69 @@
               
                 
 
-<h1 id="shakudo-platform">Shakudo Platform<a class="headerlink" href="#shakudo-platform" title="Permanent link">&para;</a></h1>
-<p>Shakudo Platform is an end-to-end platform for model development, inference, and serving with build-in infrastructure support. On Shakudo Platform, scientists can focus on iterating models and algorithms with the seamless workflow from ideation to production and work with data at scale with fully integrated distributed frameworkes such as <a href="dask_hyperplane.html">DASK</a>, Ray and Spark. </p>
-<h2 id="shakudo-platform-core-components">Shakudo Platform Core Components<a class="headerlink" href="#shakudo-platform-core-components" title="Permanent link">&para;</a></h2>
-<p>Shakudo Platform enables scientists to scale and take code to production without engineering overhead with the following core components. </p>
+<h1 id="submitting-data-to-eventbridge">Submitting Data to EventBridge<a class="headerlink" href="#submitting-data-to-eventbridge" title="Permanent link">&para;</a></h1>
+<p>We provide multiple convenience functions for submitting data to Amazon EventBridge, depending on the level of simplicity or direct control required. If your deployment has a default eventbus configured then any event without a specified target will be sent to that.</p>
+<p>You can import some or all of the functions from this library as follows:
+<div class="highlight"><pre><span></span><code>from hyperplane.eventbridge import send_to_eventbridge, send_csv_to_eventbridge, customer_specific_send_csv_to_eventbridge, aws_eventbridge_set_cred
+</code></pre></div></p>
+<h2 id="manually-specify-event-parameters">Manually specify event parameters<a class="headerlink" href="#manually-specify-event-parameters" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>send_to_eventbridge(event_name: str, message_meta: dict or list, message_data: dict or list, event_source: str = None, eventbus_name: str = None)
+</code></pre></div>
+<p>This function provides the most direct interface to EventBridge. The message data and metadata structures must be manually constructed, but they may have any form that EventBridge can accept.</p>
+<div class="highlight"><pre><span></span><code>&quot;Source&quot;: event_source (or name of calling function if unspecified),
+&quot;DetailType&quot;: event_name,
+&quot;Detail&quot;: {
+    &quot;eventName&quot;: event_name,
+    &quot;payload&quot;: {
+        &quot;meta&quot;: message_meta,
+        &quot;data&quot;: message_data,
+    },
+}
+&quot;EventBusName&quot;: eventbus_name (or deployment default if unspecified)
+</code></pre></div>
+<h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="dask_concepts.html"><strong>Hyperplane</strong>: Simple APIs for distributed DASK, job management, and alerting</a></li>
-<li><a href="sandbox.html"><strong>Sessions</strong>: A Jupyter environment with multi-CPU/GPU support and VSCode integration</a></li>
-<li><a href="create_pipeline.html"><strong>Shakudo Platform Jobs</strong>: Turn Jupyter notebooks and scripts into pipeline jobs</a></li>
-<li><a href="create_service.html"><strong>Shakudo Platform Services</strong>: Serve Jupyter notebooks and scripts as a pipeline job</a></li>
-<li><a href="triton_serving.html"><strong>Shakudo Platform Triton serving</strong>: Model serving at scale with NVIDIA Triton</a></li>
+<li><strong>event_name</strong> (<code>string</code>) - Label used to identify and optionally filter the event</li>
+<li><strong>message_meta</strong> (<code>dict</code> or <code>list</code>) - Metadata in <code>json</code> format describing the event</li>
+<li><strong>message_data</strong> (<code>dict</code> or <code>list</code>) - Data in <code>json</code> format</li>
+<li><strong>event_source</strong> (<code>string</code>, optional) - Label identifying what caused the event or created the data, often a model name or experiment number</li>
+<li><strong>eventbus_name</strong> (<code>string</code>, optional) - Target eventbus name or ARN to which the event is sent, overrides system default</li>
 </ul>
-<h2 id="shakudo-platform-integrations">Shakudo Platform Integrations<a class="headerlink" href="#shakudo-platform-integrations" title="Permanent link">&para;</a></h2>
-<p>In addition to the core components, Shakudo Platform has a growing list of intergations of popular tools. To request an integration, please create an issue to the <a href="https://github.com/devsentient/examples">github repo</a>. </p>
+<h2 id="create-an-event-from-csv-and-metadata-files">Create an event from CSV and metadata Files<a class="headerlink" href="#create-an-event-from-csv-and-metadata-files" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>send_csv_to_eventbridge(event_name: str, model_name: str, csv_file: str, meta_file: str, csv_filter = None, meta_filter = None, event_source = None, eventbus_name: str = None)
+</code></pre></div>
+<p>This function reads the given CSV and metadata files and uses them to create an event, optionally filtering by metadata label or CSV header. The resulting event has the same structure as <code>send_to_eventbridge()</code>, with <code>message_meta</code> and <code>message_data</code> being automatically constructed from <code>meta_file</code> and <code>csv_file</code> respectively.</p>
+<h3 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="mlflow_on_hyperplane.md"><strong>MLFLow</strong>: model tracking and monitoring</a></li>
-<li><a href="hyperplane_gql_queries.html"><strong>GraphQL Playground</strong>: Job management with GraphQL</a></li>
-<li><a href="rapids_on_hyperplane.html"><strong>RAPIDS</strong>: Accelerated data science with GPU</a></li>
-<li><a href="dask_hyperplane.html"><strong>Dask</strong>: Parallel computing in python</a></li>
-<li><a href="ray_hyperplane.html"><strong>RAY</strong>: Scale any python work load with full support of deep learning</a></li>
-<li><a href="spark_hyperplane.html"><strong>Spark</strong>: A unified analytics engine for large-scale data processing.</a></li>
+<li><strong>event_name</strong> (<code>string</code>) - Label used to identify and optionally filter the event</li>
+<li><strong>model_name</strong> (<code>string</code>) - Name of the model or experiment that generated the data</li>
+<li><strong>csv_file</strong> (<code>string</code>) - Path pointing to CSV file containing data to upload, with the first row providing column labels</li>
+<li><strong>meta_file</strong> (<code>string</code>) - Path pointing to file containing any desired event metadata in JSON format</li>
+<li><strong>csv_filter</strong> (<code>list of strings</code>, optional) - If provided, only columns from the CSV file with headers found in this list will be included</li>
+<li><strong>meta_filter</strong> (<code>list of strings</code>, optional) - If provided, only metadata properties with labels found in this list will be included</li>
+<li><strong>event_source</strong> (<code>string</code>, optional) - Label identifying what caused the event or created the data, defaults to <code>model_name</code> if not provided</li>
+<li><strong>eventbus_name</strong> (<code>string</code>, optional) - Target eventbus name or ARN to which the event is sent, overrides system default</li>
+</ul>
+<h2 id="per-client-custom-pre-processor">Per-client custom pre-processor<a class="headerlink" href="#per-client-custom-pre-processor" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>customer_specific_send_csv_to_eventbridge(csv_file: str, meta_file: str, model_name: str, eventbus_name: str = None)
+</code></pre></div>
+<p>If you have a consistent event format that you prefer, we can provide a custom function to automatically format the data in the appropriate manner. This sort of function prototype may vary, but the general outline would be something like this.</p>
+<h3 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>csv_file</strong> (<code>string</code>) - Path pointing to CSV file containing data to upload</li>
+<li><strong>meta_file</strong> (<code>string</code>) - Path pointing to file containing any desired event metadata</li>
+<li><strong>model_name</strong> (<code>string</code>) - Name of the model or experiment that generated the data</li>
+<li><strong>eventbus_name</strong> (<code>string</code>, optional) - Target eventbus name or ARN to which the event is sent, overrides system default</li>
+</ul>
+<h2 id="manual-authorization-config">Manual Authorization Config<a class="headerlink" href="#manual-authorization-config" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>aws_eventbridge_set_cred(aws_cred_path: str, aws_id: str = None, aws_key: str = None):
+</code></pre></div>
+<p>This library assumes that your deployment includes the appropriate AWS keys. If you are attempting to use this library before discussing those deployment options with us, or if you would prefer to use a different account for some subset of experiments, you can use this function to create the appropriate AWS credentials file.</p>
+<h3 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>aws_cred_path</strong> (<code>string</code>) - Path of credentials file to be created, should probably be <code>$HOME/.aws/credentials</code> for most use cases</li>
+<li><strong>aws_id</strong> (<code>string</code>, optional) - AWS access key ID for desired account, uses deployment default if unspecified</li>
+<li><strong>aws_key</strong> (<code>string</code>, optional) - AWS access key secret for desired account, uses deployment default if unspecified</li>
 </ul>
 
               
@@ -979,26 +1038,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-      
-        
-        <a href="api.html" class="md-footer__link md-footer__link--next" aria-label="Next: Hyperplane API" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Hyperplane API
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

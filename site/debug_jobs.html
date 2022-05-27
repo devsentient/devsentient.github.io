@@ -13,7 +13,7 @@
     
     
       
-        <title>Overview - Shakudo Platform</title>
+        <title>Debug a pipeline job - Shakudo Platform</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#shakudo-platform" class="md-skip">
+        <a href="#connect-your-ide-to-a-pipeline-job" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Debug a pipeline job
             
           </span>
         </div>
@@ -177,16 +177,14 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
       
       
       
@@ -207,59 +205,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Overview
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         Overview
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#shakudo-platform-core-components" class="md-nav__link">
-    Shakudo Platform Core Components
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shakudo-platform-integrations" class="md-nav__link">
-    Shakudo Platform Integrations
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -347,14 +297,16 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -403,11 +355,55 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="debug_jobs.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Debug a pipeline job
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="debug_jobs.html" class="md-nav__link md-nav__link--active">
         Debug a pipeline job
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#connect-your-ide-to-a-pipeline-job" class="md-nav__link">
+    Connect your IDE to a pipeline job
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug-your-pipeline-job" class="md-nav__link">
+    Debug your pipeline job
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -913,8 +909,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -923,15 +917,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#shakudo-platform-core-components" class="md-nav__link">
-    Shakudo Platform Core Components
+  <a href="#connect-your-ide-to-a-pipeline-job" class="md-nav__link">
+    Connect your IDE to a pipeline job
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#shakudo-platform-integrations" class="md-nav__link">
-    Shakudo Platform Integrations
+  <a href="#debug-your-pipeline-job" class="md-nav__link">
+    Debug your pipeline job
   </a>
   
 </li>
@@ -949,27 +943,32 @@
               
                 
 
-<h1 id="shakudo-platform">Shakudo Platform<a class="headerlink" href="#shakudo-platform" title="Permanent link">&para;</a></h1>
-<p>Shakudo Platform is an end-to-end platform for model development, inference, and serving with build-in infrastructure support. On Shakudo Platform, scientists can focus on iterating models and algorithms with the seamless workflow from ideation to production and work with data at scale with fully integrated distributed frameworkes such as <a href="dask_hyperplane.html">DASK</a>, Ray and Spark. </p>
-<h2 id="shakudo-platform-core-components">Shakudo Platform Core Components<a class="headerlink" href="#shakudo-platform-core-components" title="Permanent link">&para;</a></h2>
-<p>Shakudo Platform enables scientists to scale and take code to production without engineering overhead with the following core components. </p>
-<ul>
-<li><a href="dask_concepts.html"><strong>Hyperplane</strong>: Simple APIs for distributed DASK, job management, and alerting</a></li>
-<li><a href="sandbox.html"><strong>Sessions</strong>: A Jupyter environment with multi-CPU/GPU support and VSCode integration</a></li>
-<li><a href="create_pipeline.html"><strong>Shakudo Platform Jobs</strong>: Turn Jupyter notebooks and scripts into pipeline jobs</a></li>
-<li><a href="create_service.html"><strong>Shakudo Platform Services</strong>: Serve Jupyter notebooks and scripts as a pipeline job</a></li>
-<li><a href="triton_serving.html"><strong>Shakudo Platform Triton serving</strong>: Model serving at scale with NVIDIA Triton</a></li>
-</ul>
-<h2 id="shakudo-platform-integrations">Shakudo Platform Integrations<a class="headerlink" href="#shakudo-platform-integrations" title="Permanent link">&para;</a></h2>
-<p>In addition to the core components, Shakudo Platform has a growing list of intergations of popular tools. To request an integration, please create an issue to the <a href="https://github.com/devsentient/examples">github repo</a>. </p>
-<ul>
-<li><a href="mlflow_on_hyperplane.md"><strong>MLFLow</strong>: model tracking and monitoring</a></li>
-<li><a href="hyperplane_gql_queries.html"><strong>GraphQL Playground</strong>: Job management with GraphQL</a></li>
-<li><a href="rapids_on_hyperplane.html"><strong>RAPIDS</strong>: Accelerated data science with GPU</a></li>
-<li><a href="dask_hyperplane.html"><strong>Dask</strong>: Parallel computing in python</a></li>
-<li><a href="ray_hyperplane.html"><strong>RAY</strong>: Scale any python work load with full support of deep learning</a></li>
-<li><a href="spark_hyperplane.html"><strong>Spark</strong>: A unified analytics engine for large-scale data processing.</a></li>
-</ul>
+  <h1>Debug a pipeline job</h1>
+
+<p>To debug your pipeline job follow the following steps:</p>
+<h3 id="connect-your-ide-to-a-pipeline-job">Connect your IDE to a pipeline job<a class="headerlink" href="#connect-your-ide-to-a-pipeline-job" title="Permanent link">&para;</a></h3>
+<ol>
+<li>From the Shakudo Platform dashboard jobs tab, start a new job by pressing the <code>+</code> button.  </li>
+<li>Toggle on the <code>Debug</code> setting. Notice that the change is automatically reflected in the GraphQL query as well: <code>debuggable: true</code>  </li>
+<li>Specify the pipeline yaml path as any other job and press <code>Create</code>.  </li>
+<li>Once the job is created from the list of jobs in the dashboard click on the three dots to expand the menu and find the option <code>&lt;&gt; Connect Debugger</code>.  </li>
+<li>Click the button to have the ssh command to connect your job to your IDE copied onto your clipboard.  </li>
+<li>Open your IDE such as VSCode. Make sure that you have the Remote SSH extension installed. If not go to <a href="ssh_connection.html">this page</a> and follow step 1. under <code>First Time Connecting</code>.  </li>
+<li>Navigate to the <code>Remote Explorer</code> tab (if using VSCode, if not navigate to where you would add remote development ssh connections).  </li>
+<li>Add ssh target by clicking on <code>+</code> button and pasting the ssh connection command in your clipboard. Once you hit enter it will prompt you to specify where to save. Select the config file which you would like to update.  </li>
+<li>Once the host is added you should see that the jobs root folder is added to the list of folders under your ssh targets.  </li>
+<li>Click on the open file icon to open an ssh host in a new window. Notice in your terminal that it has routed to the main root folder of your pipeline job.  </li>
+</ol>
+<h3 id="debug-your-pipeline-job">Debug your pipeline job<a class="headerlink" href="#debug-your-pipeline-job" title="Permanent link">&para;</a></h3>
+<ol>
+<li>You can use the VSCode UI set breakpoints by clicking to the left of the line number you would like to add the breakpoints to. The added breakpoints will be indicated by a red dot. Make sure you have the Python extension installed - this only has to be done once however, if the config file is deleted then you would have to install again.  </li>
+<li>Once the breakpoints are added, navigate to the drop down beside the icon to run the python file at the top right of your window. From there select <code>Debug Python File</code>.  </li>
+<li>You can now use the UI to debug by running the job line by line.  </li>
+<li>If you would like to stop the current debugging session but would like to be able to connect to the job again, click the bottom left <code>SSH: [name.de.hyperplane.dev](http://name.de.hyperplane.dev)</code> and click <code>close remote connection</code>.  </li>
+<li>If you want to stop the debugging completely, then type in <code>stop_debug</code> in your terminal. The ssh connection will be terminated and the job will be marked as done on the Shakudo Platform dashboard (i.e. you will not be able to connect back to this job again. To debug again you will need to create a new debug job).  </li>
+</ol>
+<p>The following video traces the steps above on how to debug a pipeline job.</p>
+<div style="position: relative; padding-bottom: 46.875%; height: 0;"><iframe src="https://www.loom.com/share/889396ee885d4b7c9faa6a76241a8f13" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
               
             </article>
@@ -982,15 +981,30 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
+        
+        <a href="create_pipeline.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Create a pipeline job" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Create a pipeline job
+            </div>
+          </div>
+        </a>
+      
       
         
-        <a href="api.html" class="md-footer__link md-footer__link--next" aria-label="Next: Hyperplane API" rel="next">
+        <a href="create_service.html" class="md-footer__link md-footer__link--next" aria-label="Next: Create a pipeline service" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Hyperplane API
+              Create a pipeline service
             </div>
           </div>
           <div class="md-footer__button md-icon">

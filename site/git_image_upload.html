@@ -13,7 +13,7 @@
     
     
       
-        <title>Overview - Shakudo Platform</title>
+        <title>Uploading Output Images to Github - Shakudo Platform</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#shakudo-platform" class="md-skip">
+        <a href="#uploading-output-images-to-github" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Uploading Output Images to Github
             
           </span>
         </div>
@@ -177,16 +177,14 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
       
       
       
@@ -207,59 +205,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Overview
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         Overview
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#shakudo-platform-core-components" class="md-nav__link">
-    Shakudo Platform Core Components
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shakudo-platform-integrations" class="md-nav__link">
-    Shakudo Platform Integrations
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -923,15 +873,49 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#shakudo-platform-core-components" class="md-nav__link">
-    Shakudo Platform Core Components
+  <a href="#setup-github-pat" class="md-nav__link">
+    Setup - GitHub PAT
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#shakudo-platform-integrations" class="md-nav__link">
-    Shakudo Platform Integrations
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-a-pipeline" class="md-nav__link">
+    In a pipeline
+  </a>
+  
+    <nav class="md-nav" aria-label="In a pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-pipeline" class="md-nav__link">
+    Example pipeline:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-line-invocation" class="md-nav__link">
+    Command line invocation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caution" class="md-nav__link">
+    Caution
   </a>
   
 </li>
@@ -949,27 +933,68 @@
               
                 
 
-<h1 id="shakudo-platform">Shakudo Platform<a class="headerlink" href="#shakudo-platform" title="Permanent link">&para;</a></h1>
-<p>Shakudo Platform is an end-to-end platform for model development, inference, and serving with build-in infrastructure support. On Shakudo Platform, scientists can focus on iterating models and algorithms with the seamless workflow from ideation to production and work with data at scale with fully integrated distributed frameworkes such as <a href="dask_hyperplane.html">DASK</a>, Ray and Spark. </p>
-<h2 id="shakudo-platform-core-components">Shakudo Platform Core Components<a class="headerlink" href="#shakudo-platform-core-components" title="Permanent link">&para;</a></h2>
-<p>Shakudo Platform enables scientists to scale and take code to production without engineering overhead with the following core components. </p>
+<h1 id="uploading-output-images-to-github">Uploading Output Images to Github<a class="headerlink" href="#uploading-output-images-to-github" title="Permanent link">&para;</a></h1>
+<p>We have provided an example script to allow you to upload a picture and embed it in a commit comment on GitHub as part of your pipeline. This can be used, among other things, to post test results in a convenient place where they are easily associated with  code changes that produced them.</p>
+<p>The example script is located at <a href="https://github.com/devsentient/ds-29faf59/blob/main/git_comment/image_to_comment.sh">https://github.com/devsentient/ds-29faf59/blob/main/git_comment/image_to_comment.sh</a></p>
+<h2 id="setup-github-pat">Setup - GitHub PAT<a class="headerlink" href="#setup-github-pat" title="Permanent link">&para;</a></h2>
+<p>To use this script you must set up a GitHub Personal Access Token with 'repo' permissions (as that is where it will be saving your image). For a detailed guide see:</p>
+<p><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token</a></p>
+<p>Your GitHub username and the generated token must then be made available via kubernetes secrets. Add your base64 encoded username and token to the appropriate YAML as follows:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
+<span class="nt">data</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">gh_token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">base64encodedusername</span><span class="w"></span>
+<span class="w">    </span><span class="nt">gh_username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">base64encodedtoken</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Secret</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">app.kubernetes.io/managed-by</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pulumi</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">custom-deploy-secrets-4wf3iuzp</span><span class="w"></span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pipelines-qhxswlgm</span><span class="w"></span>
+<span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Opaque</span><span class="w"></span>
+</code></pre></div>
+<p>For the ds pod, this is stored in <code>custom-deploy-secrets-4wf3iuzp</code>.</p>
+<p>Once the secrets are stored in the kubernetes pod, export them either as files (<code>gh_username</code> and <code>gh_token</code> in <code>/etc/hyperplane/secrets/</code>) or environment variables (<code>$KBN_SECRET_GHA_USERNAME</code> and <code>$KBN_SECRET_GHA_TOKEN</code>).</p>
+<p>Most variables can be easily hard-coded by modifying the script (eg. to reduce parameter clutter), but please do not save the authorization token in the file itself.</p>
+<p>If running the script fails with a <code>"message": "Not Found"</code> error, then it is likely that either the GitHub PAT is configured incorrectly or the username/token secrets are not correctly exported.</p>
+<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
+<p>The following settings control how the image is uploaded. They may configure via job parameters or by modifying the default values within the script. If the option is set both within the script defaults and via parameters, the parameters will take priority.</p>
 <ul>
-<li><a href="dask_concepts.html"><strong>Hyperplane</strong>: Simple APIs for distributed DASK, job management, and alerting</a></li>
-<li><a href="sandbox.html"><strong>Sessions</strong>: A Jupyter environment with multi-CPU/GPU support and VSCode integration</a></li>
-<li><a href="create_pipeline.html"><strong>Shakudo Platform Jobs</strong>: Turn Jupyter notebooks and scripts into pipeline jobs</a></li>
-<li><a href="create_service.html"><strong>Shakudo Platform Services</strong>: Serve Jupyter notebooks and scripts as a pipeline job</a></li>
-<li><a href="triton_serving.html"><strong>Shakudo Platform Triton serving</strong>: Model serving at scale with NVIDIA Triton</a></li>
+<li><strong><code>gh_owner</code></strong> - Name of the target GitHub repository's owner.</li>
+<li><strong><code>gh_repo</code></strong> - Name of the target GitHub repository.</li>
+<li><strong><code>gh_commit_sha</code></strong> - Hash ID of the commit on which to make the comment.</li>
+<li><strong><code>png_path</code></strong> - Path to the image file to be uploaded.</li>
+<li><strong><code>png_description</code></strong> - HTML alt-text to be embedded in the image when posted. Optional - if not included the alt text will be blank.</li>
+<li><strong><code>png_upload_dir</code></strong> - This string will be used as a target directory into which the image will be uploaded. The directory does not need to already exist. Set to <code>''</code> to upload to the repo root directory. Do not include a leading <code>/</code> character. Optional - default is <code>'graph_output_dir'</code>.</li>
+<li><strong><code>png_add_timestamp</code></strong> - Set to <code>1</code> to append a timestamp of the image creation time to the image name before upload, or <code>0</code> to leave as is. Enable this if your image generating function uses the same (or repeating) filenames. Timestamp granularity is in seconds, and will need to be changed if you are generating images faster than that. Optional - default is <code>1</code>.</li>
 </ul>
-<h2 id="shakudo-platform-integrations">Shakudo Platform Integrations<a class="headerlink" href="#shakudo-platform-integrations" title="Permanent link">&para;</a></h2>
-<p>In addition to the core components, Shakudo Platform has a growing list of intergations of popular tools. To request an integration, please create an issue to the <a href="https://github.com/devsentient/examples">github repo</a>. </p>
-<ul>
-<li><a href="mlflow_on_hyperplane.md"><strong>MLFLow</strong>: model tracking and monitoring</a></li>
-<li><a href="hyperplane_gql_queries.html"><strong>GraphQL Playground</strong>: Job management with GraphQL</a></li>
-<li><a href="rapids_on_hyperplane.html"><strong>RAPIDS</strong>: Accelerated data science with GPU</a></li>
-<li><a href="dask_hyperplane.html"><strong>Dask</strong>: Parallel computing in python</a></li>
-<li><a href="ray_hyperplane.html"><strong>RAY</strong>: Scale any python work load with full support of deep learning</a></li>
-<li><a href="spark_hyperplane.html"><strong>Spark</strong>: A unified analytics engine for large-scale data processing.</a></li>
-</ul>
+<h2 id="in-a-pipeline">In a pipeline<a class="headerlink" href="#in-a-pipeline" title="Permanent link">&para;</a></h2>
+<p>To use this script in a pipeline, add it to the end of your YAML file and enter the relevant job parameters</p>
+<h3 id="example-pipeline">Example pipeline:<a class="headerlink" href="#example-pipeline" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>pipeline:
+    name: &quot;Image upload test pipe&quot;
+    tasks:
+        - name: &quot;Other steps that save images to disk&quot;
+          ...
+          ...
+        - name: &quot;Upload result image&quot;
+          type: &quot;bash script&quot;
+          bash_script_path: &quot;git_comment/image_to_comment.sh&quot;
+</code></pre></div>
+<h2 id="command-line-invocation">Command line invocation<a class="headerlink" href="#command-line-invocation" title="Permanent link">&para;</a></h2>
+<p>Parameters may be passed to this as command line arguments, which will override the above Shakudo Platform job parameters. The secrets <code>$KBN_SECRET_GHA_USERNAME</code> and <code>$KBN_SECRET_GHA_TOKEN</code> must still exist.</p>
+<p>Syntax:
+<code>image_to_comment.sh gh_owner gh_repo gh_commit_sha png_path png_description</code></p>
+<p>This is necessary if you wish to upload multiple images per job. Supply the command line arguments in your YAML file as follows:</p>
+<div class="highlight"><pre><span></span><code>        - name: &quot;Upload first result image&quot;
+          type: &quot;bash script&quot;
+          bash_script_path: &quot;git_comment/image_to_comment.sh gh_owner_1 gh_repo_1 gh_commit_sha_1 png_path_1 png_description_1&quot;
+        - name: &quot;Upload second result image&quot;
+          type: &quot;bash script&quot;
+          bash_script_path: &quot;git_comment/image_to_comment.sh gh_owner_2 gh_repo_2 gh_commit_sha_2 png_path_2 png_description_2&quot;
+</code></pre></div>
+<p>It is possible to use <code>$HYPERPLANE_JOB_PARAMETER_PARAMNAME</code> variables in place of any or all command line options, if wish to use the dashboard for configuration rather than setting those options in your YAML file.</p>
+<h2 id="caution">Caution<a class="headerlink" href="#caution" title="Permanent link">&para;</a></h2>
+<p>This script does not perform input sanitation and when invoked with command line arguments should not be passed raw user-supplied data from any public source. There shouldn't be a risk when using it as intended, though - if unsanitized data is being passed directly to the command line then there are much bigger problems happening elsewhere in the pipeline.</p>
 
               
             </article>
@@ -979,26 +1004,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-      
-        
-        <a href="api.html" class="md-footer__link md-footer__link--next" aria-label="Next: Hyperplane API" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Hyperplane API
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

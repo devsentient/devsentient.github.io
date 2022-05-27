@@ -13,7 +13,7 @@
     
     
       
-        <title>Overview - Shakudo Platform</title>
+        <title>Create a pipeline service - Shakudo Platform</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#shakudo-platform" class="md-skip">
+        <a href="#create-a-service" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Create a pipeline service
             
           </span>
         </div>
@@ -177,16 +177,14 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
       
       
       
@@ -207,59 +205,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Overview
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         Overview
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#shakudo-platform-core-components" class="md-nav__link">
-    Shakudo Platform Core Components
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shakudo-platform-integrations" class="md-nav__link">
-    Shakudo Platform Integrations
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -347,14 +297,16 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -417,11 +369,100 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="create_service.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Create a pipeline service
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="create_service.html" class="md-nav__link md-nav__link--active">
         Create a pipeline service
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-prepare-your-code" class="md-nav__link">
+    1. Prepare your code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-create-a-pipeline-yaml" class="md-nav__link">
+    2. Create a pipeline yaml
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-set-your-timeouts-to-1" class="md-nav__link">
+    3. Set your timeouts to -1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-optional-expose-a-port" class="md-nav__link">
+    4. (optional) Expose a port
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-optional-connecting-to-a-service" class="md-nav__link">
+    5. (optional) Connecting to a service
+  </a>
+  
+    <nav class="md-nav" aria-label="5. (optional) Connecting to a service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#importing-and-invoking-the-function" class="md-nav__link">
+    Importing and invoking the function:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-value" class="md-nav__link">
+    Return value:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -923,16 +964,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#shakudo-platform-core-components" class="md-nav__link">
-    Shakudo Platform Core Components
+  <a href="#1-prepare-your-code" class="md-nav__link">
+    1. Prepare your code
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#shakudo-platform-integrations" class="md-nav__link">
-    Shakudo Platform Integrations
+  <a href="#2-create-a-pipeline-yaml" class="md-nav__link">
+    2. Create a pipeline yaml
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-set-your-timeouts-to-1" class="md-nav__link">
+    3. Set your timeouts to -1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-optional-expose-a-port" class="md-nav__link">
+    4. (optional) Expose a port
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-optional-connecting-to-a-service" class="md-nav__link">
+    5. (optional) Connecting to a service
+  </a>
+  
+    <nav class="md-nav" aria-label="5. (optional) Connecting to a service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#importing-and-invoking-the-function" class="md-nav__link">
+    Importing and invoking the function:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-value" class="md-nav__link">
+    Return value:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -949,27 +1031,108 @@
               
                 
 
-<h1 id="shakudo-platform">Shakudo Platform<a class="headerlink" href="#shakudo-platform" title="Permanent link">&para;</a></h1>
-<p>Shakudo Platform is an end-to-end platform for model development, inference, and serving with build-in infrastructure support. On Shakudo Platform, scientists can focus on iterating models and algorithms with the seamless workflow from ideation to production and work with data at scale with fully integrated distributed frameworkes such as <a href="dask_hyperplane.html">DASK</a>, Ray and Spark. </p>
-<h2 id="shakudo-platform-core-components">Shakudo Platform Core Components<a class="headerlink" href="#shakudo-platform-core-components" title="Permanent link">&para;</a></h2>
-<p>Shakudo Platform enables scientists to scale and take code to production without engineering overhead with the following core components. </p>
-<ul>
-<li><a href="dask_concepts.html"><strong>Hyperplane</strong>: Simple APIs for distributed DASK, job management, and alerting</a></li>
-<li><a href="sandbox.html"><strong>Sessions</strong>: A Jupyter environment with multi-CPU/GPU support and VSCode integration</a></li>
-<li><a href="create_pipeline.html"><strong>Shakudo Platform Jobs</strong>: Turn Jupyter notebooks and scripts into pipeline jobs</a></li>
-<li><a href="create_service.html"><strong>Shakudo Platform Services</strong>: Serve Jupyter notebooks and scripts as a pipeline job</a></li>
-<li><a href="triton_serving.html"><strong>Shakudo Platform Triton serving</strong>: Model serving at scale with NVIDIA Triton</a></li>
-</ul>
-<h2 id="shakudo-platform-integrations">Shakudo Platform Integrations<a class="headerlink" href="#shakudo-platform-integrations" title="Permanent link">&para;</a></h2>
-<p>In addition to the core components, Shakudo Platform has a growing list of intergations of popular tools. To request an integration, please create an issue to the <a href="https://github.com/devsentient/examples">github repo</a>. </p>
-<ul>
-<li><a href="mlflow_on_hyperplane.md"><strong>MLFLow</strong>: model tracking and monitoring</a></li>
-<li><a href="hyperplane_gql_queries.html"><strong>GraphQL Playground</strong>: Job management with GraphQL</a></li>
-<li><a href="rapids_on_hyperplane.html"><strong>RAPIDS</strong>: Accelerated data science with GPU</a></li>
-<li><a href="dask_hyperplane.html"><strong>Dask</strong>: Parallel computing in python</a></li>
-<li><a href="ray_hyperplane.html"><strong>RAY</strong>: Scale any python work load with full support of deep learning</a></li>
-<li><a href="spark_hyperplane.html"><strong>Spark</strong>: A unified analytics engine for large-scale data processing.</a></li>
-</ul>
+<h1 id="create-a-service">Create a service<a class="headerlink" href="#create-a-service" title="Permanent link">&para;</a></h1>
+<p>In contrast to regular pipeline jobs, which are batch jobs or a series of steps that run end-to-end, you can create jobs from never-ending notebooks or scripts as services. Rather than running in your cluster, you can trigger this to run similar to a pipeline job on Shakudo Platform to run a continuous loop without having to keep your cluster up or your notebook running.</p>
+<h2 id="1-prepare-your-code">1. Prepare your code<a class="headerlink" href="#1-prepare-your-code" title="Permanent link">&para;</a></h2>
+<p>Ensure your notebook or scripts can run without errors on your Jupyter instance. Alternatively, if you are using the pipeline to debug your runs, you can skip this step.</p>
+<h2 id="2-create-a-pipeline-yaml">2. Create a pipeline yaml<a class="headerlink" href="#2-create-a-pipeline-yaml" title="Permanent link">&para;</a></h2>
+<p>Create a .yaml file to list your steps. You can start with adding the following template to <code>example_pipeline.yaml</code>:  </p>
+<div class="highlight"><pre><span></span><code>pipeline:
+  name: &quot;Example pipeline&quot;
+  tasks:
+  - name: &quot;First step&quot;
+    type: &quot;jupyter notebook&quot;
+    notebook_path: &quot;neverending_notebook.ipynb&quot;
+    notebook_output_path: &quot;neverending_notebook_output.ipynb&quot;
+  - ...
+</code></pre></div>
+<p>You can replace the first step under <code>tasks</code> and add additional tasks following the same notation. </p>
+<p>Add a Jupyter notebook step by adding the following block to your YAML:
+<div class="highlight"><pre><span></span><code>  - name: &quot;[your_step_name]&quot;
+    type: &quot;jupyter notebook&quot;
+    notebook_path: &quot;[notebook/path/relative/to/top/level/of/repo.ipynb]&quot;
+    notebook_output_path: &quot;[some/notebook_output_name.ipynb]&quot;
+</code></pre></div></p>
+<p>Add a Python/VSCode step by adding the following block to your yaml. The script should be runnable with <code>python [py_path]</code>:
+<div class="highlight"><pre><span></span><code>  - name: &quot;[another_step_name]&quot;
+    type: &quot;vscode notebook&quot;
+    py_path: &quot;[py/file/relative/to/top/level/of/repo.py]&quot;
+</code></pre></div></p>
+<p>Add a Javascript step by adding the following block to your YAML. The script should be runnable with <code>node [js_path]</code>:
+<div class="highlight"><pre><span></span><code>  - name: &quot;[another_step_name]&quot;
+    type: &quot;js script&quot;
+    js_path: &quot;[js/file/relative/to/top/level/of/repo.js]&quot;
+</code></pre></div></p>
+<p>Add a Bash script step by adding the following block to your YAML. The Bash script should be runnable with <code>bash [bash_script_path]</code>:
+<div class="highlight"><pre><span></span><code>  - name: &quot;[another_step_name]&quot;
+    type: &quot;bash script&quot;
+    bash_script_path: &quot;[sh/file/relative/to/top/level/of/repo.sh]&quot;
+</code></pre></div></p>
+<h2 id="3-set-your-timeouts-to-1">3. Set your timeouts to -1<a class="headerlink" href="#3-set-your-timeouts-to-1" title="Permanent link">&para;</a></h2>
+<p>Specify <code>activeTimeout</code> and <code>timeout</code> as -1 to indicate to Shakudo Platform that your job should not time out. </p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">mu</span><span class="kc">tat</span><span class="err">io</span><span class="kc">n</span><span class="w"> </span><span class="err">submi</span><span class="kc">t</span><span class="err">Model</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="err">crea</span><span class="kc">te</span><span class="err">Pipeli</span><span class="kc">ne</span><span class="err">Job</span><span class="w"> </span><span class="err">(da</span><span class="kc">ta</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="err">jobType</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;basic&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="err">ac</span><span class="kc">t</span><span class="err">iveTimeou</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="kc">t</span><span class="err">imeou</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="err">pipeli</span><span class="kc">ne</span><span class="err">YamlPa</span><span class="kc">t</span><span class="err">h</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example_pipeline.yaml&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="err">parame</span><span class="kc">ters</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">crea</span><span class="kc">te</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="p">[</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="err">key</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;param1&quot;</span><span class="p">,</span><span class="w"> </span><span class="err">value</span><span class="p">:</span><span class="w">  </span><span class="s2">&quot;value1&quot;</span><span class="p">},</span><span class="w">   </span><span class="err">##</span><span class="w"> </span><span class="err">cha</span><span class="kc">n</span><span class="err">ge</span><span class="w"> </span><span class="kc">t</span><span class="err">hese</span><span class="w"> </span><span class="kc">f</span><span class="err">or</span><span class="w"> </span><span class="err">di</span><span class="kc">fferent</span><span class="w"> </span><span class="err">experime</span><span class="kc">nts</span><span class="w"></span>
+<span class="w">        </span><span class="p">]</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="err">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">      </span><span class="err">id</span><span class="w"> </span>
+<span class="w">      </span><span class="err">ru</span><span class="kc">n</span><span class="err">Id</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Alternatively, use the <strong>Services</strong> tab on the dashboard.
+<img alt="services dashboard" src="images/services_tab.png" title="services dashboard" />
+<img alt="create a service on dashboard" src="images/create_service.png" title="create a service on dashboard" /></p>
+<h2 id="4-optional-expose-a-port">4. (optional) Expose a port<a class="headerlink" href="#4-optional-expose-a-port" title="Permanent link">&para;</a></h2>
+<p>If your neverending script requires an exposed port, be sure to expose it on <strong>host 0.0.0.0, port 8787</strong>. Then, include an exposed port in the job submission. 
+<img alt="expose port" src="images/expose_port.png" title="expose port" /></p>
+<h2 id="5-optional-connecting-to-a-service">5. (optional) Connecting to a service<a class="headerlink" href="#5-optional-connecting-to-a-service" title="Permanent link">&para;</a></h2>
+<p>Once your service is up and running you can connect to it from other jobs. To make this easier, Shakudo Platform's python package includes a helper function to find the current URL of any running service. Note that this is an internal URL and is only accessible from your other Shakudo Platform jobs - information regarding making a publicly accessible service <a href="frontend_tools.html">is available here</a>.</p>
+<h3 id="importing-and-invoking-the-function">Importing and invoking the function:<a class="headerlink" href="#importing-and-invoking-the-function" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>from hyperplane import utils
+
+URL_string = utils.get_service_url(name_or_id, input_type, check_exists, check_listening)
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th align="left">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>name_</code> <br /> <code>or_id</code></td>
+<td align="left">string, <br /> required</td>
+<td align="left">The name or ID of the service in question. Service names are assigned by the user at job creation. IDs are Shakudo Platform's internal job labels, and take the form of a string of hexadecimal characters and dashes.</td>
+</tr>
+<tr>
+<td align="left"><code>input_</code> <br /> <code>type</code></td>
+<td align="left">string, <br /> optional, <br /> defaults <br /> to <code>"auto"</code></td>
+<td align="left">Specifies whether a name or ID has been supplied. Possible values:  <br /> <code>"auto"</code> -  function will automatically determine how to treat the input. <br /> <code>"name"</code> -  assume the input is a service name (useful if you have named your service with the ID of another job or service for some reason). <br /> <code>"id"</code> -  assume the input is a job ID. <br /> Any other string will fall back to auto-recognition.</td>
+</tr>
+<tr>
+<td align="left"><code>check_</code> <br /> <code>exists</code></td>
+<td align="left">boolean, <br /> optional, <br /> defaults <br /> to <code>True</code></td>
+<td align="left">If <code>True</code> the function will query Shakudo Platform's job database to ensure the service is running. Will raise an error if the service is not found. This test is necessary if name_or_id is a service name, and in that case values of False will be ignored.</td>
+</tr>
+<tr>
+<td align="left"><code>check_</code> <br /> <code>listening</code></td>
+<td align="left">boolean, <br /> optional, <br /> defaults <br /> to <code>False</code></td>
+<td align="left">If <code>True</code> the function will ensure that the service is listening on the expected port and URL. Will raise an error if it cannot connect to the service. May introduce a slight execution delay, depending on network environment.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-value">Return value:<a class="headerlink" href="#return-value" title="Permanent link">&para;</a></h3>
+<p>The function returns a string containing the service URL, including port number</p>
 
               
             </article>
@@ -982,15 +1145,30 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
+        
+        <a href="debug_jobs.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Debug a pipeline job" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Debug a pipeline job
+            </div>
+          </div>
+        </a>
+      
       
         
-        <a href="api.html" class="md-footer__link md-footer__link--next" aria-label="Next: Hyperplane API" rel="next">
+        <a href="image_jobtype_packages.html" class="md-footer__link md-footer__link--next" aria-label="Next: Images and jobTypes" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Hyperplane API
+              Images and jobTypes
             </div>
           </div>
           <div class="md-footer__button md-icon">

@@ -13,7 +13,7 @@
     
     
       
-        <title>Overview - Shakudo Platform</title>
+        <title>Create and use custom PodSpecs in Shakudo Platform - Shakudo Platform</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#shakudo-platform" class="md-skip">
+        <a href="#create-and-use-custom-podspecs-in-shakudo-platform" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Create and use custom PodSpecs in Shakudo Platform
             
           </span>
         </div>
@@ -177,16 +177,14 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
       
       
       
@@ -207,59 +205,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Overview
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         Overview
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#shakudo-platform-core-components" class="md-nav__link">
-    Shakudo Platform Core Components
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shakudo-platform-integrations" class="md-nav__link">
-    Shakudo Platform Integrations
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -923,16 +873,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#shakudo-platform-core-components" class="md-nav__link">
-    Shakudo Platform Core Components
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#shakudo-platform-integrations" class="md-nav__link">
-    Shakudo Platform Integrations
+  <a href="#create-your-custom-image" class="md-nav__link">
+    Create your custom image
   </a>
+  
+    <nav class="md-nav" aria-label="Create your custom image">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#podspec-fields" class="md-nav__link">
+    PodSpec Fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-custom-podspec-using-the-dashboard" class="md-nav__link">
+    Create a custom PodSpec using the dashboard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-custom-podspec-using-kubectl" class="md-nav__link">
+    Create custom PodSpec using kubectl
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -949,27 +926,60 @@
               
                 
 
-<h1 id="shakudo-platform">Shakudo Platform<a class="headerlink" href="#shakudo-platform" title="Permanent link">&para;</a></h1>
-<p>Shakudo Platform is an end-to-end platform for model development, inference, and serving with build-in infrastructure support. On Shakudo Platform, scientists can focus on iterating models and algorithms with the seamless workflow from ideation to production and work with data at scale with fully integrated distributed frameworkes such as <a href="dask_hyperplane.html">DASK</a>, Ray and Spark. </p>
-<h2 id="shakudo-platform-core-components">Shakudo Platform Core Components<a class="headerlink" href="#shakudo-platform-core-components" title="Permanent link">&para;</a></h2>
-<p>Shakudo Platform enables scientists to scale and take code to production without engineering overhead with the following core components. </p>
+<h1 id="create-and-use-custom-podspecs-in-shakudo-platform">Create and use custom PodSpecs in Shakudo Platform<a class="headerlink" href="#create-and-use-custom-podspecs-in-shakudo-platform" title="Permanent link">&para;</a></h1>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="dask_concepts.html"><strong>Hyperplane</strong>: Simple APIs for distributed DASK, job management, and alerting</a></li>
-<li><a href="sandbox.html"><strong>Sessions</strong>: A Jupyter environment with multi-CPU/GPU support and VSCode integration</a></li>
-<li><a href="create_pipeline.html"><strong>Shakudo Platform Jobs</strong>: Turn Jupyter notebooks and scripts into pipeline jobs</a></li>
-<li><a href="create_service.html"><strong>Shakudo Platform Services</strong>: Serve Jupyter notebooks and scripts as a pipeline job</a></li>
-<li><a href="triton_serving.html"><strong>Shakudo Platform Triton serving</strong>: Model serving at scale with NVIDIA Triton</a></li>
+<li>kubectl + kubeconfig access to Shakudo Platform</li>
+<li>access to Shakudo Platform dashboard</li>
 </ul>
-<h2 id="shakudo-platform-integrations">Shakudo Platform Integrations<a class="headerlink" href="#shakudo-platform-integrations" title="Permanent link">&para;</a></h2>
-<p>In addition to the core components, Shakudo Platform has a growing list of intergations of popular tools. To request an integration, please create an issue to the <a href="https://github.com/devsentient/examples">github repo</a>. </p>
+<h2 id="create-your-custom-image">Create your custom image<a class="headerlink" href="#create-your-custom-image" title="Permanent link">&para;</a></h2>
+<p>Now that you have the basic credentials to create a custom PodSpec, you can follow the steps below.</p>
 <ul>
-<li><a href="mlflow_on_hyperplane.md"><strong>MLFLow</strong>: model tracking and monitoring</a></li>
-<li><a href="hyperplane_gql_queries.html"><strong>GraphQL Playground</strong>: Job management with GraphQL</a></li>
-<li><a href="rapids_on_hyperplane.html"><strong>RAPIDS</strong>: Accelerated data science with GPU</a></li>
-<li><a href="dask_hyperplane.html"><strong>Dask</strong>: Parallel computing in python</a></li>
-<li><a href="ray_hyperplane.html"><strong>RAY</strong>: Scale any python work load with full support of deep learning</a></li>
-<li><a href="spark_hyperplane.html"><strong>Spark</strong>: A unified analytics engine for large-scale data processing.</a></li>
+<li><a href="#podspec-fields">PodSpec Fields</a></li>
+<li><a href="#create-podspec-via-dashboard">Create a custom PodSpec using the dashboard and GraphQL</a></li>
+<li><a href="#create-podspec-via-kubectl">Create custom PodSpec using kubectl</a></li>
 </ul>
+<h3 id="podspec-fields"><strong>PodSpec Fields</strong><a class="headerlink" href="#podspec-fields" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>@param displayName: The name of the PodSpec which is display on the dashboard <br>
+@param podspecName: The name of the PodSpec use on Kubernetes - this name has to be unique <br>
+@param description: A short description of what this PodSpec is <br>
+@param icon: An icon which best describes your custom PodSpec <br>
+@param podSpec: A YAML of the podSpec - this will be created automatically <br>
+@param hyperplaneUserEmail: The user email of the user creating the PodSpec - this will be set automatically <br>
+@param volumes: <br>
+@param volumeMounts: <br></p>
+</blockquote>
+<h3 id="create-a-custom-podspec-using-the-dashboard"><strong>Create a custom PodSpec using the dashboard</strong><a class="headerlink" href="#create-a-custom-podspec-using-the-dashboard" title="Permanent link">&para;</a></h3>
+<p>You can navigate to the PodSpec panel on the left-side menu of the Shakudo Platform dashboard.</p>
+<p><img alt="Sessions custom url" src="images/podspec_menu_location.png" title="Sessions custom url" /></p>
+<p>The below example shows the required fields being populated and the graphQL mutation and YAML is created automatically to allow users to also create the PodSpec via an API call or using kubectl.</p>
+<p><strong>Required Fields</strong></p>
+<ol>
+<li><strong><em>*displayName</em></strong>*</li>
+<li><strong><em>*podspecName</em></strong><em>: (This field is populated automatically, however users can edit the field. This field should be unique and no two PodSpec's can share the same </em><strong>podspecName</strong>*)</li>
+<li><strong><em>*description</em></strong>*</li>
+<li><strong><em>*icon</em></strong>*</li>
+</ol>
+<p><strong>Resources</strong></p>
+<p>The PodSpec's resources are automatically populated by the UI using two environment variables that specify allocatable memory and CPU - however users can set these to their desired values:</p>
+<ol>
+<li><strong><em>HYPERPLANE_ROOT_ALLOCATABLE_CPU</em></strong></li>
+<li><strong><em>HYPERPLANE_ROOT_ALLOCATABLE_RAM</em></strong></li>
+</ol>
+<p><strong>Node Selector</strong></p>
+<p>This value chooses which node each session/job using this PodSpec will run on. For cloud customers this is pre-selected. However, for on-prem customers they can have certain nodes which they can select to run on.</p>
+<p><strong>Volumes &amp; Volumes Mounts</strong></p>
+<p>Additional volumes for your sessions and jobs; see https://kubernetes.io/docs/concepts/storage/volumes/</p>
+<p><strong>Environment Variables</strong></p>
+<p>The environment variables will be pre-set for any environment using the created PodSpec to run.</p>
+<p><img alt="Sessions custom url" src="images/podspec_fields_graphql.png" title="Sessions custom url" /></p>
+<p>By clicking on the YAML button on the top left side of the screen you also get access to the YAML used to create the <code>hyperplanepodspec</code> object. This can be copied over to a file and you can create the PodSpec using kubectl.</p>
+<p><img alt="Sessions custom url" src="images/podspec_yaml.png" title="Sessions custom url" /></p>
+<h3 id="create-custom-podspec-using-kubectl"><strong>Create custom PodSpec using kubectl</strong><a class="headerlink" href="#create-custom-podspec-using-kubectl" title="Permanent link">&para;</a></h3>
+<p>When you want to create a custom PodSpec using kubectl, you can create the YAML automatically using the dashboard and copy over the YAML to a file and apply that file using the following command:</p>
+<p><code>kubectl apply -f &lt;name_of_yaml_file&gt;</code></p>
+<p>This will automatically create the <code>hyperplanepodspec</code> object on Kubernetes.</p>
 
               
             </article>
@@ -979,26 +989,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-      
-        
-        <a href="api.html" class="md-footer__link md-footer__link--next" aria-label="Next: Hyperplane API" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Hyperplane API
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

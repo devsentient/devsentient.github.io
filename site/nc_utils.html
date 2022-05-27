@@ -13,7 +13,7 @@
     
     
       
-        <title>Overview - Shakudo Platform</title>
+        <title>Utilities for notebooks - Shakudo Platform</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#shakudo-platform" class="md-skip">
+        <a href="#utilities-for-notebooks" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Utilities for notebooks
             
           </span>
         </div>
@@ -177,16 +177,14 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
       
       
       
@@ -207,59 +205,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Overview
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         Overview
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#shakudo-platform-core-components" class="md-nav__link">
-    Shakudo Platform Core Components
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shakudo-platform-integrations" class="md-nav__link">
-    Shakudo Platform Integrations
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -923,16 +873,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#shakudo-platform-core-components" class="md-nav__link">
-    Shakudo Platform Core Components
+  <a href="#initialize-cluster" class="md-nav__link">
+    Initialize cluster
   </a>
+  
+    <nav class="md-nav" aria-label="Initialize cluster">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns" class="md-nav__link">
+    Returns
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#shakudo-platform-integrations" class="md-nav__link">
-    Shakudo Platform Integrations
+  <a href="#post-a-slack-message" class="md-nav__link">
+    Post a Slack message
   </a>
+  
+    <nav class="md-nav" aria-label="Post a Slack message">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_1" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_1" class="md-nav__link">
+    Returns
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -949,27 +939,40 @@
               
                 
 
-<h1 id="shakudo-platform">Shakudo Platform<a class="headerlink" href="#shakudo-platform" title="Permanent link">&para;</a></h1>
-<p>Shakudo Platform is an end-to-end platform for model development, inference, and serving with build-in infrastructure support. On Shakudo Platform, scientists can focus on iterating models and algorithms with the seamless workflow from ideation to production and work with data at scale with fully integrated distributed frameworkes such as <a href="dask_hyperplane.html">DASK</a>, Ray and Spark. </p>
-<h2 id="shakudo-platform-core-components">Shakudo Platform Core Components<a class="headerlink" href="#shakudo-platform-core-components" title="Permanent link">&para;</a></h2>
-<p>Shakudo Platform enables scientists to scale and take code to production without engineering overhead with the following core components. </p>
+<h1 id="utilities-for-notebooks">Utilities for notebooks<a class="headerlink" href="#utilities-for-notebooks" title="Permanent link">&para;</a></h1>
+<p>Utilities for notebooks are under the <code>hyperplane.notebook_common</code> module</p>
+<h3 id="initialize-cluster">Initialize cluster<a class="headerlink" href="#initialize-cluster" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>initialize_cluster(num_workers:int=2, local_mode:bool=False, worker_spec_yaml:str=WORKER_SPEC_TEMPLATE_1_1, timeout:int=1200, nthreads:int=1, nprocs:int=15, ram_gb_per_proc:float=0.7, cores_per_worker:int=15, scheduler_deploy_mode:str="remote", dashboard_port:str="random", logging:str="quiet"
+):</p>
+</blockquote>
+<h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h4>
 <ul>
-<li><a href="dask_concepts.html"><strong>Hyperplane</strong>: Simple APIs for distributed DASK, job management, and alerting</a></li>
-<li><a href="sandbox.html"><strong>Sessions</strong>: A Jupyter environment with multi-CPU/GPU support and VSCode integration</a></li>
-<li><a href="create_pipeline.html"><strong>Shakudo Platform Jobs</strong>: Turn Jupyter notebooks and scripts into pipeline jobs</a></li>
-<li><a href="create_service.html"><strong>Shakudo Platform Services</strong>: Serve Jupyter notebooks and scripts as a pipeline job</a></li>
-<li><a href="triton_serving.html"><strong>Shakudo Platform Triton serving</strong>: Model serving at scale with NVIDIA Triton</a></li>
+<li><strong>num_workers</strong> (<code>int</code>, <em>optional</em>, defaults to 2) - Number of workers for you dask cluster</li>
+<li><strong>local_mode</strong> (<code>bool</code>, <em>optional</em>, defaults to False) - whether to use local cluster or distributed KubeCluster</li>
+<li><strong>worker_spec_yaml</strong> (<code>str</code>, <em>optional</em>, defaults to <code>nc.WORKER_SPEC_TEMPLATE_1_1</code>) - a string yaml for cluster configs</li>
+<li><strong>timeout</strong> (<code>int</code>, <em>optional</em>, defaults to 1200) - time limit (seconds) for a scheduler to wait to connect before returning a timeout error</li>
+<li><strong>nthreads</strong> (<code>int</code>, <em>optional</em>, defaults to 1) - Number of threads per worker in your cluster</li>
+<li><strong>nprocs</strong> (<code>int</code>, <em>optional</em>, defaults to 15) - Number of processes per worker in your cluster</li>
+<li><strong>ram_gb_per_proc</strong> (<code>float</code>, <em>optional</em>, defaults to 0.7) - gb of ram per process, per worker</li>
+<li><strong>cores_per_worker</strong> (<code>int</code>, <em>optional</em>, defaults to 15) - number of cores per worker</li>
+<li><strong>scheduler_deploy_mode</strong> (<code>str</code>, <em>optional</em>, defaults to "remote") - where to deploy the scheduler (remote in its own worker, or locally in jhub)</li>
+<li><strong>dashboard_port</strong> (<code>str</code>, <em>optional</em>, defaults to "random") - choose a port number for your dashboard, or leave as "random" to have a random port, which will not conflict</li>
+<li><strong>logging</strong> (<code>str</code>, <em>optional</em>, defaults to "quiet") - logging level for printouts when initializing. Available options are <code>verbose</code> or <code>quiet</code>.</li>
 </ul>
-<h2 id="shakudo-platform-integrations">Shakudo Platform Integrations<a class="headerlink" href="#shakudo-platform-integrations" title="Permanent link">&para;</a></h2>
-<p>In addition to the core components, Shakudo Platform has a growing list of intergations of popular tools. To request an integration, please create an issue to the <a href="https://github.com/devsentient/examples">github repo</a>. </p>
+<h4 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h4>
+<p>Tuple[Client, KubeCluster]</p>
+<h3 id="post-a-slack-message">Post a Slack message<a class="headerlink" href="#post-a-slack-message" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>notebook_common.post_message(msg: str, channel: str = "")</p>
+</blockquote>
+<h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li><a href="mlflow_on_hyperplane.md"><strong>MLFLow</strong>: model tracking and monitoring</a></li>
-<li><a href="hyperplane_gql_queries.html"><strong>GraphQL Playground</strong>: Job management with GraphQL</a></li>
-<li><a href="rapids_on_hyperplane.html"><strong>RAPIDS</strong>: Accelerated data science with GPU</a></li>
-<li><a href="dask_hyperplane.html"><strong>Dask</strong>: Parallel computing in python</a></li>
-<li><a href="ray_hyperplane.html"><strong>RAY</strong>: Scale any python work load with full support of deep learning</a></li>
-<li><a href="spark_hyperplane.html"><strong>Spark</strong>: A unified analytics engine for large-scale data processing.</a></li>
+<li><strong>msg</strong> (<code>str</code>, <em>required</em>) - String of message to send (can include formatting)</li>
+<li><strong>channel</strong> (<code>str</code>, <em>optional</em>, defaults to "") - a public channel to post the <code>msg</code>. If left empty, it will default to the webhook url's default channel</li>
 </ul>
+<h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h4>
+<p>requests.models.Response</p>
 
               
             </article>
@@ -979,26 +982,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-      
-        
-        <a href="api.html" class="md-footer__link md-footer__link--next" aria-label="Next: Hyperplane API" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Hyperplane API
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

@@ -13,7 +13,7 @@
     
     
       
-        <title>Overview - Shakudo Platform</title>
+        <title>Working with Dask - Shakudo Platform</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#shakudo-platform" class="md-skip">
+        <a href="#working-with-dask" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Working with Dask
             
           </span>
         </div>
@@ -177,16 +177,14 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
       
       
       
@@ -207,59 +205,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Overview
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         Overview
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#shakudo-platform-core-components" class="md-nav__link">
-    Shakudo Platform Core Components
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shakudo-platform-integrations" class="md-nav__link">
-    Shakudo Platform Integrations
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -537,14 +487,16 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -565,12 +517,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
       
       
       
@@ -591,11 +545,147 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="dask_concepts.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Working with Dask
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="dask_concepts.html" class="md-nav__link md-nav__link--active">
         Working with Dask
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#collections" class="md-nav__link">
+    Collections
+  </a>
+  
+    <nav class="md-nav" aria-label="Collections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dask-bags" class="md-nav__link">
+    dask bags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dask-dataframes" class="md-nav__link">
+    Dask dataframes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operations" class="md-nav__link">
+    Operations
+  </a>
+  
+    <nav class="md-nav" aria-label="Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lazy-calculations" class="md-nav__link">
+    Lazy calculations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repartitioning" class="md-nav__link">
+    Repartitioning
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#split-out" class="md-nav__link">
+    Split out
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cheap-vs-expensive-computations" class="md-nav__link">
+    Cheap vs. expensive computations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-types" class="md-nav__link">
+    File types
+  </a>
+  
+    <nav class="md-nav" aria-label="File types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parquet-files" class="md-nav__link">
+    parquet files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avro-files" class="md-nav__link">
+    avro files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saving-to-cloud-storage" class="md-nav__link">
+    Saving to cloud storage
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -923,15 +1013,103 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#shakudo-platform-core-components" class="md-nav__link">
-    Shakudo Platform Core Components
+  <a href="#collections" class="md-nav__link">
+    Collections
   </a>
+  
+    <nav class="md-nav" aria-label="Collections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dask-bags" class="md-nav__link">
+    dask bags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dask-dataframes" class="md-nav__link">
+    Dask dataframes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#shakudo-platform-integrations" class="md-nav__link">
-    Shakudo Platform Integrations
+  <a href="#operations" class="md-nav__link">
+    Operations
+  </a>
+  
+    <nav class="md-nav" aria-label="Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lazy-calculations" class="md-nav__link">
+    Lazy calculations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repartitioning" class="md-nav__link">
+    Repartitioning
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#split-out" class="md-nav__link">
+    Split out
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cheap-vs-expensive-computations" class="md-nav__link">
+    Cheap vs. expensive computations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-types" class="md-nav__link">
+    File types
+  </a>
+  
+    <nav class="md-nav" aria-label="File types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parquet-files" class="md-nav__link">
+    parquet files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avro-files" class="md-nav__link">
+    avro files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saving-to-cloud-storage" class="md-nav__link">
+    Saving to cloud storage
   </a>
   
 </li>
@@ -949,27 +1127,103 @@
               
                 
 
-<h1 id="shakudo-platform">Shakudo Platform<a class="headerlink" href="#shakudo-platform" title="Permanent link">&para;</a></h1>
-<p>Shakudo Platform is an end-to-end platform for model development, inference, and serving with build-in infrastructure support. On Shakudo Platform, scientists can focus on iterating models and algorithms with the seamless workflow from ideation to production and work with data at scale with fully integrated distributed frameworkes such as <a href="dask_hyperplane.html">DASK</a>, Ray and Spark. </p>
-<h2 id="shakudo-platform-core-components">Shakudo Platform Core Components<a class="headerlink" href="#shakudo-platform-core-components" title="Permanent link">&para;</a></h2>
-<p>Shakudo Platform enables scientists to scale and take code to production without engineering overhead with the following core components. </p>
+<h1 id="working-with-dask">Working with Dask<a class="headerlink" href="#working-with-dask" title="Permanent link">&para;</a></h1>
+<p>Let's explore some Dask concepts. In this section, we introduce dask bags and dataframes, as well as common file formats.</p>
+<p>For full Dask documentation, check out <a href="https://docs.dask.org/en/latest/">https://docs.dask.org/en/</a></p>
+<h2 id="collections">Collections<a class="headerlink" href="#collections" title="Permanent link">&para;</a></h2>
+<p>Dask collections are useful for large datasets because they support delayed tasks. We will explore three types&mdash; Dask bags, Dask dataframes, and Dask arrays. </p>
+<h3 id="dask-bags">dask bags<a class="headerlink" href="#dask-bags" title="Permanent link">&para;</a></h3>
+<p>Dask bags (synonymous with multisets) are unordered collections of immutable objects. Below are some common operations:</p>
+<p>Select records where:
+<div class="highlight"><pre><span></span><code><span class="n">b</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">record</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;num_clicks&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> 
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><span class="go">({&#39;id&#39;: &#39;01mz489cnkd&#39;,  </span>
+<span class="go">  &#39;area&#39;: &#39;Aerial Alaska&#39;,  </span>
+<span class="go">  &#39;num_clicks&#39;: 3,</span>
+<span class="go">  &#39;info&#39;: {&#39;a_field&#39;: 0}},  </span>
+<span class="go"> {&#39;id&#39;: &#39;25z48t9cfaf&#39;,  </span>
+<span class="go">  &#39;area&#39;: &#39;Bustling Birktown&#39;,  </span>
+<span class="go">  &#39;num_clicks&#39;: 5,</span>
+<span class="go">  &#39;info&#39;: {&#39;a_field&#39;: 1}})  </span>
+</code></pre></div>
+<p>Select one field:
+<div class="highlight"><pre><span></span><code><span class="n">b</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">record</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><span class="go">(&#39;Aerial Alaska&#39;, &#39;Bustling Birktown&#39;)</span>
+</code></pre></div>
+<p>Aggregate the number of records in your bag:
+<div class="highlight"><pre><span></span><code><span class="n">b</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><span class="go">100000</span>
+</code></pre></div>
+<p>Note that the <code>.take(n)</code> function will return the first <strong>n</strong> records from the bag, only in the first partition.</p>
+<p>For more info, see <a href="https://examples.dask.org/bag.html">https://examples.dask.org/bag.html</a></p>
+<h3 id="dask-dataframes">Dask dataframes<a class="headerlink" href="#dask-dataframes" title="Permanent link">&para;</a></h3>
+<p>Dask dataframes are collections of pandas dataframes. It can be used in cases where one pandas dataframe is too large to fit in memory and to speed up expensive computations by using multiple cores. </p>
+<p>To read multiple csvs, use the * or a list of files. Each file will be read into a separate partition.</p>
+<div class="highlight"><pre><span></span><code>import dask.dataframe as dd
+df = dd.read_csv(&#39;2014-*.csv&#39;)
+</code></pre></div>
+<p>A common workflow is the following:</p>
+<ol>
+<li>Load large datasets from files</li>
+<li>Filter to a subset of data</li>
+<li>Shuffle data to get an intelligent index</li>
+<li>Perform queries or aggregations using the indices</li>
+</ol>
+<p>For more information on Dask dataframes, see <a href="https://docs.dask.org/en/latest/dataframe.html">https://docs.dask.org/en/latest/dataframe.html</a>.</p>
+<h2 id="operations">Operations<a class="headerlink" href="#operations" title="Permanent link">&para;</a></h2>
+<h3 id="lazy-calculations">Lazy calculations<a class="headerlink" href="#lazy-calculations" title="Permanent link">&para;</a></h3>
+<p>Dask operates with <strong>lazy</strong> collections, meaning operations on a collection are simply scheduled by the scheduler, but the actual calculation will not be triggered until explicitly called. At first, you will notice that dataframe operations or functions seem to happen almost instantaneously, but nothing will be calculated until one of the following is used:</p>
 <ul>
-<li><a href="dask_concepts.html"><strong>Hyperplane</strong>: Simple APIs for distributed DASK, job management, and alerting</a></li>
-<li><a href="sandbox.html"><strong>Sessions</strong>: A Jupyter environment with multi-CPU/GPU support and VSCode integration</a></li>
-<li><a href="create_pipeline.html"><strong>Shakudo Platform Jobs</strong>: Turn Jupyter notebooks and scripts into pipeline jobs</a></li>
-<li><a href="create_service.html"><strong>Shakudo Platform Services</strong>: Serve Jupyter notebooks and scripts as a pipeline job</a></li>
-<li><a href="triton_serving.html"><strong>Shakudo Platform Triton serving</strong>: Model serving at scale with NVIDIA Triton</a></li>
+<li>.persist()</li>
+<li>.compute()</li>
+<li>.load()</li>
 </ul>
-<h2 id="shakudo-platform-integrations">Shakudo Platform Integrations<a class="headerlink" href="#shakudo-platform-integrations" title="Permanent link">&para;</a></h2>
-<p>In addition to the core components, Shakudo Platform has a growing list of intergations of popular tools. To request an integration, please create an issue to the <a href="https://github.com/devsentient/examples">github repo</a>. </p>
+<p><code>.compute()</code> will trigger a computation on the Dask cluster without returning anything. You can use this if some of your functions include saving to a location.</p>
+<p><code>.persist()</code> will trigger a computation on the Dask cluster and store the results in ram. Use this sparingly, only if you need to use an intermediate collection, or after a computationally expensive operation such as index, groupby, etc.</p>
+<p><code>.load()</code> will trigger a computation on the Dask cluster when you are working with Dask xarrays.</p>
+<p>For example, you can trigger all computations on your dataframe like the following:</p>
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">dask</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="s1">&#39;file*.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;col_a&#39;</span><span class="p">,</span> <span class="s1">&#39;col_b&#39;</span><span class="p">]]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">persist</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="repartitioning">Repartitioning<a class="headerlink" href="#repartitioning" title="Permanent link">&para;</a></h3>
+<p>After a few computations, your Dask df may need to be repartitioned, due to the partition size-number tradeoff. Partitions that are too large will cause out of memory errors, while too many partitions will incure a larger overhead time for the schedule to process. See more on best practices at <a href="https://docs.dask.org/en/latest/dataframe-best-practices.html">https://docs.dask.org/en/latest/dataframe-best-practices.html</a>.</p>
+<h3 id="split-out">Split out<a class="headerlink" href="#split-out" title="Permanent link">&para;</a></h3>
+<p>Dataframe aggregation operations can get wuite slow. Try to use <code>split_out</code> in aggregation operationg like groupbys to spread the aggregation work.</p>
+<h3 id="cheap-vs-expensive-computations">Cheap vs. expensive computations<a class="headerlink" href="#cheap-vs-expensive-computations" title="Permanent link">&para;</a></h3>
+<p>Examples of fast and cheap computations:</p>
 <ul>
-<li><a href="mlflow_on_hyperplane.md"><strong>MLFLow</strong>: model tracking and monitoring</a></li>
-<li><a href="hyperplane_gql_queries.html"><strong>GraphQL Playground</strong>: Job management with GraphQL</a></li>
-<li><a href="rapids_on_hyperplane.html"><strong>RAPIDS</strong>: Accelerated data science with GPU</a></li>
-<li><a href="dask_hyperplane.html"><strong>Dask</strong>: Parallel computing in python</a></li>
-<li><a href="ray_hyperplane.html"><strong>RAY</strong>: Scale any python work load with full support of deep learning</a></li>
-<li><a href="spark_hyperplane.html"><strong>Spark</strong>: A unified analytics engine for large-scale data processing.</a></li>
+<li>Element-wise ops (addition, multiplication)</li>
+<li>Row-wise operations and filtering: <code>df[df.x &gt; 0]</code></li>
+<li>Joining Dask dfs along indexed fields, or joining with a one-partition Dask df</li>
+<li>Max, min, count, common aggregations (<code>df.groupby(df.x).y.max()</code>)</li>
+<li>isin: <code>df[df.x.isin([1, 2, 3])]</code></li>
+<li>drop_duplicates</li>
+<li>groupby-apply on an index: <code>df.groupby(['idx', 'x']).apply(myfunc)</code></li>
 </ul>
+<p>Examples of slow and expensive computations (for this reason, it is often recommended to use persist your data after these steps for stability):</p>
+<ul>
+<li>setting an index: <code>df.set_index(df.x)</code></li>
+<li>groupby-apply on non-index fields: <code>df.groupby(df.x).apply(myfunc)</code></li>
+<li>joining two dataframes along non-index columns</li>
+</ul>
+<h2 id="file-types">File types<a class="headerlink" href="#file-types" title="Permanent link">&para;</a></h2>
+<h3 id="parquet-files">parquet files<a class="headerlink" href="#parquet-files" title="Permanent link">&para;</a></h3>
+<p>Parquet is a columnar storage format for Hadoop, which enables parallel reading and writing, and is most useful for efficiently filtering a subset of fields in a Dask df. </p>
+<h3 id="avro-files">avro files<a class="headerlink" href="#avro-files" title="Permanent link">&para;</a></h3>
+<p>Avro is a row-based storage format for Hadoop, which is most efficient if you intend to retrieve and use all fields or columns in the dataset. </p>
+<h2 id="saving-to-cloud-storage">Saving to cloud storage<a class="headerlink" href="#saving-to-cloud-storage" title="Permanent link">&para;</a></h2>
+<p>Remember that new workers are spun up when use <code>.initialize_cluster()</code>, and they are destroyed on <code>cluster.close()</code>. This means you should ensure your intermediate and output files are saved in a cloud storage location that can be accessed outside of each node. </p>
+<p>This can be achieved through the following code example:</p>
+<div class="highlight"><pre><span></span><code><span class="n">gcp_project</span> <span class="o">=</span> <span class="n">YOUR_GCP_PROJECT</span>
+<span class="n">gcs_client</span> <span class="o">=</span> <span class="n">storage</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">gcp_project</span><span class="p">)</span>
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">gcs_client</span><span class="o">.</span><span class="n">get_bucket</span><span class="p">(</span><span class="n">bucket</span><span class="p">)</span>
+<span class="n">blob</span> <span class="o">=</span> <span class="n">bucket</span><span class="o">.</span><span class="n">blob</span><span class="p">(</span><span class="n">yourfile</span><span class="p">)</span>
+<span class="n">blob</span><span class="o">.</span><span class="n">upload_from_string</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">content_type</span><span class="o">=</span><span class="s1">&#39;application/x-www-form-urlencoded;charset=UTF-8&#39;</span><span class="p">)</span>
+</code></pre></div>
 
               
             </article>
@@ -982,15 +1236,30 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
+        
+        <a href="nlp_hyperplane.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: NLP on Shakudo Platform" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              NLP on Shakudo Platform
+            </div>
+          </div>
+        </a>
+      
       
         
-        <a href="api.html" class="md-footer__link md-footer__link--next" aria-label="Next: Hyperplane API" rel="next">
+        <a href="examples.html" class="md-footer__link md-footer__link--next" aria-label="Next: Dask optimization examples" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Hyperplane API
+              Dask optimization examples
             </div>
           </div>
           <div class="md-footer__button md-icon">

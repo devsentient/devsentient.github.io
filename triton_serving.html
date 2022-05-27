@@ -13,7 +13,7 @@
     
     
       
-        <title>Overview - Shakudo Platform</title>
+        <title>Triton - Shakudo Platform</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#shakudo-platform" class="md-skip">
+        <a href="#what-is-triton-inference-server" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Triton
             
           </span>
         </div>
@@ -177,16 +177,14 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
       
       
       
@@ -207,59 +205,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Overview
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         Overview
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#shakudo-platform-core-components" class="md-nav__link">
-    Shakudo Platform Core Components
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shakudo-platform-integrations" class="md-nav__link">
-    Shakudo Platform Integrations
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -537,14 +487,16 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -696,11 +648,76 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="triton_serving.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Triton
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="triton_serving.html" class="md-nav__link md-nav__link--active">
         Triton
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-triton-inference-server" class="md-nav__link">
+    What is Triton Inference Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serve-a-model" class="md-nav__link">
+    Serve a model
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serve-multiple-models-with-one-endpoint" class="md-nav__link">
+    Serve multiple models with one endpoint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serve-ensemble-models" class="md-nav__link">
+    Serve ensemble models
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -913,8 +930,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -923,15 +938,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#shakudo-platform-core-components" class="md-nav__link">
-    Shakudo Platform Core Components
+  <a href="#what-is-triton-inference-server" class="md-nav__link">
+    What is Triton Inference Server
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#shakudo-platform-integrations" class="md-nav__link">
-    Shakudo Platform Integrations
+  <a href="#serve-a-model" class="md-nav__link">
+    Serve a model
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serve-multiple-models-with-one-endpoint" class="md-nav__link">
+    Serve multiple models with one endpoint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serve-ensemble-models" class="md-nav__link">
+    Serve ensemble models
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
   </a>
   
 </li>
@@ -949,26 +985,119 @@
               
                 
 
-<h1 id="shakudo-platform">Shakudo Platform<a class="headerlink" href="#shakudo-platform" title="Permanent link">&para;</a></h1>
-<p>Shakudo Platform is an end-to-end platform for model development, inference, and serving with build-in infrastructure support. On Shakudo Platform, scientists can focus on iterating models and algorithms with the seamless workflow from ideation to production and work with data at scale with fully integrated distributed frameworkes such as <a href="dask_hyperplane.html">DASK</a>, Ray and Spark. </p>
-<h2 id="shakudo-platform-core-components">Shakudo Platform Core Components<a class="headerlink" href="#shakudo-platform-core-components" title="Permanent link">&para;</a></h2>
-<p>Shakudo Platform enables scientists to scale and take code to production without engineering overhead with the following core components. </p>
+  <h1>Triton</h1>
+
+<h2 id="what-is-triton-inference-server">What is Triton Inference Server<a class="headerlink" href="#what-is-triton-inference-server" title="Permanent link">&para;</a></h2>
+<p>Shakudo Platform comes with a built-in NVIDIA Triton Inference Server that simplifies the deployment of AI models at scale in production. Triton is an open-source inference serving software, it lets teams deploy trained AI models from any framework (TensorFlow, NVIDIA® TensorRT®, PyTorch, ONNX Runtime, or custom) from local storage or cloud platform on any GPU- or CPU-based infrastructure (cloud, data center, or edge).</p>
+<h2 id="serve-a-model">Serve a model<a class="headerlink" href="#serve-a-model" title="Permanent link">&para;</a></h2>
+<p>To serve your model with the Triton server </p>
+<ol>
+<li>
+<p>Upload your model checkpoint to the triton server model repository and write a client file. The default path of the Triton model repository is <code>{your_cloud_bucket}/triton-server/model-repository/</code>. Follow the structure of the <a href="https://github.com/triton-inference-server/server/blob/main/docs/model_repository.md">Triton model repostiory</a> to add models. For certain types of model, such as Tensorflow, you can skip the config.pbtxt, Triton can create the file for you based on the model checkpoint. Triton will automatically detect the new model and load the model onto the server. If the model is loaded successfully, you'll see the new model on the left side of the <strong>Triton Tab</strong>.</p>
+</li>
+<li>
+<p>Write a client that contains an inference function using the model. The official <a href="https://github.com/triton-inference-server/client/tree/main/src/python/examples">Triton client examples</a> have a collection of examples of on client files for popular machine learning tasks such as image recognition and NLP. </p>
+</li>
+<li>
+<p>Wrap your client function and dependencies with FastAPI or Flask App. Example code in this repo for <a href="https://github.com/devsentient/examples/tree/main/example_notebooks/serving/triton">a simple model</a>. </p>
+</li>
+<li>
+<p>Start a service for your client App on the right side of your <strong>Triton Tab</strong>.<img alt="Triton tab" src="images/triton_tab.png" /> 
+Fill in the following fields:</p>
 <ul>
-<li><a href="dask_concepts.html"><strong>Hyperplane</strong>: Simple APIs for distributed DASK, job management, and alerting</a></li>
-<li><a href="sandbox.html"><strong>Sessions</strong>: A Jupyter environment with multi-CPU/GPU support and VSCode integration</a></li>
-<li><a href="create_pipeline.html"><strong>Shakudo Platform Jobs</strong>: Turn Jupyter notebooks and scripts into pipeline jobs</a></li>
-<li><a href="create_service.html"><strong>Shakudo Platform Services</strong>: Serve Jupyter notebooks and scripts as a pipeline job</a></li>
-<li><a href="triton_serving.html"><strong>Shakudo Platform Triton serving</strong>: Model serving at scale with NVIDIA Triton</a></li>
+<li>Triton client name : any unique name you want the client to be called, for example <code>a_simple_model</code></li>
+<li>Custom URL endpoint : the URL your model endpoint will be served on, for example <code>a_simple_model_endpoint</code></li>
+<li>Shakudo Platform YAML: the path of your yaml file that contains the bash file which starts the server. In the simple model example the path is <code>hyperplane-triton-api/hyperplane_triton_api.yaml</code> </li>
 </ul>
-<h2 id="shakudo-platform-integrations">Shakudo Platform Integrations<a class="headerlink" href="#shakudo-platform-integrations" title="Permanent link">&para;</a></h2>
-<p>In addition to the core components, Shakudo Platform has a growing list of intergations of popular tools. To request an integration, please create an issue to the <a href="https://github.com/devsentient/examples">github repo</a>. </p>
+</li>
+</ol>
+<p>After the service is up and running, your <code>endpoint</code> is called <code>infer</code> in your App.py, your model endpoint can be reached at <code>https://{your_domain}/hyperplane.dev/a_simple_model_endpoint/infer/</code></p>
+<p>Checkout the <a href="https://github.com/devsentient/examples/tree/main/example_notebooks/serving/triton">full example code</a>. </p>
+<h2 id="serve-multiple-models-with-one-endpoint">Serve multiple models with one endpoint<a class="headerlink" href="#serve-multiple-models-with-one-endpoint" title="Permanent link">&para;</a></h2>
+<p>With NVIDIA Triton on Shakudo Platform, serving multiple models with one endpoint is as easy as serving  one model with one endpoint. </p>
+<ol>
+<li>
+<p>Add models to your Triton model repository, models will be loaded by Triton server automatically. If the models are loaded successfully, the newly added model will show up in the available model list on the left side of your <strong>Triton tab</strong>. </p>
+</li>
+<li>
+<p>Add a model client as usual, but parameterize the inference function with model_name. The client code will handle the logic of which model to use among the multiple models. Simple example code:</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code>def run_inference(request_body: str, model_name: str) -&gt; str:      
+    ## input output code as usual    
+    response = client.infer(model_name, inputs, outputs=outputs)    
+    ## other post infer code    
+</code></pre></div>
+<h2 id="serve-ensemble-models">Serve ensemble models<a class="headerlink" href="#serve-ensemble-models" title="Permanent link">&para;</a></h2>
+<p>With the Triton server, ensemble models can be served through building a pipeline of models. The official Triton documentation provides more details on <a href="https://github.com/triton-inference-server/server/blob/main/docs/architecture.md">ensemble models</a>.
+On Shakudo Platform ensemble models can be served following these steps:</p>
+<p>Step 1. Add models to your Triton model repository, models will be loaded by Triton server automatically. If the models are loaded successfully, the newly added model will show up in the available model list on the left side of your <strong>Triton tab</strong>. </p>
+<p>Step 2. Create a new model in the Triton model repository on the bucket <code>{your_cloud_bucket}/triton-server/model-repository/</code> and add an <code>config.pbtxt</code> file for the ensemble model. Make sure the platform is set to <code>ensemble</code>. Here is an example of ensemble <code>config.pbtxt</code> file:  </p>
+<div class="highlight"><pre><span></span><code>name: &quot;ensemble_model&quot;   
+platform: &quot;ensemble&quot;   
+input [  
+    {  
+        name: &quot;IMAGE&quot;  
+        data_type: TYPE_UINT8  
+        dims: [256, 256, 3]  
+    }  
+]    
+output [  
+    {  
+        name: &quot;MODEL1_OUTPUT&quot;  
+        data_type: TYPE_INT64  
+        dims: [ 2 ]  
+    },  
+    {  
+        name: &quot;MODEL2_OUTPUT&quot;  
+        data_type: TYPE_INT64  
+        dims: [ 2 ]  
+    }  
+]   
+ensemble_scheduling {  
+    step [  
+        {  
+            model_name: &quot;model1&quot;  
+            model_version: -1  
+            input_map {  
+                key: &quot;INPUT__0&quot;  
+                value: &quot;IMAGE&quot;  
+                }  
+            output_map {  
+                key: &quot;OUTPUT__1&quot;  
+                value: &quot;MODEL1_OUTPUT&quot;  
+                }  
+        },  
+        {  
+            model_name: &quot;model2&quot;  
+            model_version: -1  
+            input_map {  
+                key: &quot;INPUT__0&quot;  
+                value: &quot;IMAGE&quot;  
+                }  
+            output_map {  
+                key: &quot;OUTPUT__1&quot;  
+                value: &quot;MODEL2_OUTPUT&quot;  
+                }  
+        }  
+    ]  
+}  
+</code></pre></div>
+<p>Step 3. Add a <code>model.py</code> in the model repository that uses python backend. It should take <code>INPUT__0</code> as input and <code>OUTPUT__1</code> and <code>OUTPUT__2</code> as model outputs. Use <code>asyncio</code> to gather inference results from both models concurrently, such as the following: <br />
+<div class="highlight"><pre><span></span><code>in_0 = pb_utils.get_input_tensor_by_name(request, &quot;INPUT__0&quot;)   
+inference_response_awaits = []   
+for model_name in [&#39;model1&#39;, &#39;model2&#39;]:   
+infer_request = pb_utils.InferenceRequest(  
+    model_name=model_name,  
+    requested_output_names=[&quot;OUTPUT__1&quot;],  
+    inputs=[in_0])  
+inference_response_awaits.append(infer_request.async_exec())  
+inference_responses = await asyncio.gather(*inference_response_awaits)  
+</code></pre></div>
+To read more about the <a href="https://github.com/triton-inference-server/python_backend/tree/main/examples/bls">Triton python backend</a>. </p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="mlflow_on_hyperplane.md"><strong>MLFLow</strong>: model tracking and monitoring</a></li>
-<li><a href="hyperplane_gql_queries.html"><strong>GraphQL Playground</strong>: Job management with GraphQL</a></li>
-<li><a href="rapids_on_hyperplane.html"><strong>RAPIDS</strong>: Accelerated data science with GPU</a></li>
-<li><a href="dask_hyperplane.html"><strong>Dask</strong>: Parallel computing in python</a></li>
-<li><a href="ray_hyperplane.html"><strong>RAY</strong>: Scale any python work load with full support of deep learning</a></li>
-<li><a href="spark_hyperplane.html"><strong>Spark</strong>: A unified analytics engine for large-scale data processing.</a></li>
+<li>Examples code that serves an image recognition model: a <a href="https://github.com/devsentient/examples/tree/main/example_notebooks/serving/triton">simple Triton service on Shakudo Platform</a> in the <a href="https://github.com/devsentient/examples/tree/main/example_notebooks">Shakudo Platform example repository</a></li>
 </ul>
 
               
@@ -982,15 +1111,30 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
+        
+        <a href="r_on_hyperplane.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: R" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              R
+            </div>
+          </div>
+        </a>
+      
       
         
-        <a href="api.html" class="md-footer__link md-footer__link--next" aria-label="Next: Hyperplane API" rel="next">
+        <a href="crypto.html" class="md-footer__link md-footer__link--next" aria-label="Next: CCXT" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Hyperplane API
+              CCXT
             </div>
           </div>
           <div class="md-footer__button md-icon">

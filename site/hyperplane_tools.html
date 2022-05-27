@@ -13,7 +13,7 @@
     
     
       
-        <title>Overview - Shakudo Platform</title>
+        <title>Shakudo Platform tools - Shakudo Platform</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#shakudo-platform" class="md-skip">
+        <a href="#shakudo-platform-tools" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Shakudo Platform tools
             
           </span>
         </div>
@@ -177,16 +177,14 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
       
       
       
@@ -207,59 +205,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Overview
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         Overview
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#shakudo-platform-core-components" class="md-nav__link">
-    Shakudo Platform Core Components
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shakudo-platform-integrations" class="md-nav__link">
-    Shakudo Platform Integrations
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -923,16 +873,70 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#shakudo-platform-core-components" class="md-nav__link">
-    Shakudo Platform Core Components
+  <a href="#create-slack-alerts" class="md-nav__link">
+    Create slack alerts
   </a>
+  
+    <nav class="md-nav" aria-label="Create slack alerts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-incoming-webhooks-for-a-specific-channel" class="md-nav__link">
+    Using incoming webhooks for a specific channel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-slack-token" class="md-nav__link">
+    Using slack token
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#shakudo-platform-integrations" class="md-nav__link">
-    Shakudo Platform Integrations
+  <a href="#graphql-queries-in-jupyter-notebooks" class="md-nav__link">
+    Graphql queries in jupyter notebooks
   </a>
+  
+    <nav class="md-nav" aria-label="Graphql queries in jupyter notebooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#submit-a-job-from-the-notebook" class="md-nav__link">
+    Submit a job from the notebook
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-on-a-job-status-in-your-notebook" class="md-nav__link">
+    Check on a job status in your notebook
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cancel-a-job-from-the-notebook" class="md-nav__link">
+    Cancel a job from the notebook
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#persistence-for-scheduling" class="md-nav__link">
+    Persistence for scheduling
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -949,27 +953,80 @@
               
                 
 
-<h1 id="shakudo-platform">Shakudo Platform<a class="headerlink" href="#shakudo-platform" title="Permanent link">&para;</a></h1>
-<p>Shakudo Platform is an end-to-end platform for model development, inference, and serving with build-in infrastructure support. On Shakudo Platform, scientists can focus on iterating models and algorithms with the seamless workflow from ideation to production and work with data at scale with fully integrated distributed frameworkes such as <a href="dask_hyperplane.html">DASK</a>, Ray and Spark. </p>
-<h2 id="shakudo-platform-core-components">Shakudo Platform Core Components<a class="headerlink" href="#shakudo-platform-core-components" title="Permanent link">&para;</a></h2>
-<p>Shakudo Platform enables scientists to scale and take code to production without engineering overhead with the following core components. </p>
-<ul>
-<li><a href="dask_concepts.html"><strong>Hyperplane</strong>: Simple APIs for distributed DASK, job management, and alerting</a></li>
-<li><a href="sandbox.html"><strong>Sessions</strong>: A Jupyter environment with multi-CPU/GPU support and VSCode integration</a></li>
-<li><a href="create_pipeline.html"><strong>Shakudo Platform Jobs</strong>: Turn Jupyter notebooks and scripts into pipeline jobs</a></li>
-<li><a href="create_service.html"><strong>Shakudo Platform Services</strong>: Serve Jupyter notebooks and scripts as a pipeline job</a></li>
-<li><a href="triton_serving.html"><strong>Shakudo Platform Triton serving</strong>: Model serving at scale with NVIDIA Triton</a></li>
-</ul>
-<h2 id="shakudo-platform-integrations">Shakudo Platform Integrations<a class="headerlink" href="#shakudo-platform-integrations" title="Permanent link">&para;</a></h2>
-<p>In addition to the core components, Shakudo Platform has a growing list of intergations of popular tools. To request an integration, please create an issue to the <a href="https://github.com/devsentient/examples">github repo</a>. </p>
-<ul>
-<li><a href="mlflow_on_hyperplane.md"><strong>MLFLow</strong>: model tracking and monitoring</a></li>
-<li><a href="hyperplane_gql_queries.html"><strong>GraphQL Playground</strong>: Job management with GraphQL</a></li>
-<li><a href="rapids_on_hyperplane.html"><strong>RAPIDS</strong>: Accelerated data science with GPU</a></li>
-<li><a href="dask_hyperplane.html"><strong>Dask</strong>: Parallel computing in python</a></li>
-<li><a href="ray_hyperplane.html"><strong>RAY</strong>: Scale any python work load with full support of deep learning</a></li>
-<li><a href="spark_hyperplane.html"><strong>Spark</strong>: A unified analytics engine for large-scale data processing.</a></li>
-</ul>
+<h1 id="shakudo-platform-tools">Shakudo Platform tools<a class="headerlink" href="#shakudo-platform-tools" title="Permanent link">&para;</a></h1>
+<p>Shakudo Platform offers tools to improve your pipelining.  </p>
+<h2 id="create-slack-alerts">Create slack alerts<a class="headerlink" href="#create-slack-alerts" title="Permanent link">&para;</a></h2>
+<p>Whether you are running scheduled pipelines or one-time jobs, posting slack alerts can be done simply with the following:</p>
+<h3 id="using-incoming-webhooks-for-a-specific-channel">Using incoming webhooks for a specific channel<a class="headerlink" href="#using-incoming-webhooks-for-a-specific-channel" title="Permanent link">&para;</a></h3>
+<p>Ensure you have provided an environment variable for your webhook. This may already be set up for you.
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;WEBHOOK_URL&quot;</span> <span class="p">]</span><span class="o">=</span> <span class="s2">&quot;https://hooks.slack.com/services/TXXXXXXX/BXXXXXXXXX/&quot;</span>
+</code></pre></div></p>
+<p>Post a message
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">hyperplane</span> <span class="kn">import</span> <span class="n">notebook_common</span> <span class="k">as</span> <span class="n">nc</span>
+<span class="n">nc</span><span class="o">.</span><span class="n">post_message</span><span class="p">(</span><span class="s2">&quot;Testing an incoming webhook&quot;</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="s2">&quot;#your-public-channel&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p>Post a dict
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">hyperplane</span> <span class="kn">import</span> <span class="n">notebook_common</span> <span class="k">as</span> <span class="n">nc</span>
+<span class="n">nc</span><span class="o">.</span><span class="n">post_table</span><span class="p">({</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="s2">&quot;a value&quot;</span><span class="p">,</span> <span class="s2">&quot;header b&quot;</span><span class="p">:</span> <span class="s2">&quot;some value&quot;</span><span class="p">},</span> <span class="n">channel</span><span class="o">=</span><span class="s2">&quot;#your-public-channel&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<h3 id="using-slack-token">Using slack token<a class="headerlink" href="#using-slack-token" title="Permanent link">&para;</a></h3>
+<p>Ensure you have specified your slack token. This may already be set up for you.
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;SLACK_TOKEN&quot;</span> <span class="p">]</span><span class="o">=</span> <span class="s2">&quot;your-slack-t0ken&quot;</span>
+</code></pre></div></p>
+<p>Post a message
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">hyperplane</span> <span class="kn">import</span> <span class="n">notebook_common</span> <span class="k">as</span> <span class="n">nc</span>
+<span class="n">sh</span> <span class="o">=</span> <span class="n">nc</span><span class="o">.</span><span class="n">SlackHelper</span><span class="p">()</span>
+<span class="n">sh</span><span class="o">.</span><span class="n">post_message</span><span class="p">(</span><span class="s1">&#39;Testing&#39;</span><span class="p">,</span> <span class="s1">&#39;#some-channel&#39;</span><span class="p">)</span>
+</code></pre></div></p>
+<p>Post a dict
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">hyperplane</span> <span class="kn">import</span> <span class="n">notebook_common</span> <span class="k">as</span> <span class="n">nc</span>
+<span class="n">sh</span> <span class="o">=</span> <span class="n">nc</span><span class="o">.</span><span class="n">SlackHelper</span><span class="p">()</span>
+<span class="n">sh</span><span class="o">.</span><span class="n">post_table</span><span class="p">({</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="s2">&quot;a value&quot;</span><span class="p">,</span> <span class="s2">&quot;header b&quot;</span><span class="p">:</span> <span class="s2">&quot;some value&quot;</span><span class="p">},</span> <span class="s1">&#39;#some-channel&#39;</span><span class="p">)</span>
+</code></pre></div></p>
+<h2 id="graphql-queries-in-jupyter-notebooks">Graphql queries in jupyter notebooks<a class="headerlink" href="#graphql-queries-in-jupyter-notebooks" title="Permanent link">&para;</a></h2>
+<h3 id="submit-a-job-from-the-notebook">Submit a job from the notebook<a class="headerlink" href="#submit-a-job-from-the-notebook" title="Permanent link">&para;</a></h3>
+<p>You can paste the following snippet in a cell to run a pipeline from your jupyter notebook</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">newjob</span> <span class="o">=</span> <span class="k">await</span> <span class="n">nc</span><span class="o">.</span><span class="n">submit_pipeline_job</span><span class="p">(</span><span class="s1">&#39;hello.yaml&#39;</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">})</span>
+</code></pre></div>
+newjob returns 
+<code>{'id': 'd6f2f4a3-aef7-477e-bc0b-f3a27b0ac0cb', 'runId': None}</code></p>
+<h3 id="check-on-a-job-status-in-your-notebook">Check on a job status in your notebook<a class="headerlink" href="#check-on-a-job-status-in-your-notebook" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a-job-id&quot;</span><span class="p">,</span> <span class="s2">&quot;another-job-id&quot;</span><span class="p">]</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="k">await</span> <span class="n">nc</span><span class="o">.</span><span class="n">checkjobs</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">loop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</code></pre></div>
+<code>loop=True</code> will refresh the output every 5 seconds.</p>
+<div class="highlight"><pre><span></span><code><span class="gu">### Jobs summary</span>
+0 / 2 in progress
+
+0 / 2 pending
+
+2 / 2 processed
+
+2 done | 0 timed out | 0 cancelled | 0 failed
+
+Progress: 100.0%
+
+<span class="gu">### Dask dashboards</span>
+a-job-id done None
+another-job-id done None
+</code></pre></div>
+<h3 id="cancel-a-job-from-the-notebook">Cancel a job from the notebook<a class="headerlink" href="#cancel-a-job-from-the-notebook" title="Permanent link">&para;</a></h3>
+<p>You can cancel a job by passing the id of your job. </p>
+<p><div class="highlight"><pre><span></span><code><span class="k">await</span> <span class="n">nc</span><span class="o">.</span><span class="n">cancel_pipeline_job</span><span class="p">(</span><span class="s1">&#39;some-id&#39;</span><span class="p">)</span>
+</code></pre></div>
+returns
+<code>{'id': 'some-id', 'status': 'cancelled}</code></p>
+<h3 id="persistence-for-scheduling">Persistence for scheduling<a class="headerlink" href="#persistence-for-scheduling" title="Permanent link">&para;</a></h3>
+<p>When you have scheduled jobs, you may want to store values from previous runs. To set a persistent value, use the following snippet:</p>
+<div class="highlight"><pre><span></span><code><span class="n">nc</span><span class="o">.</span><span class="n">set_current_job_output</span><span class="p">(</span><span class="s2">&quot;message in str&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>To retrieve values from previous runs, use the following code:</p>
+<div class="highlight"><pre><span></span><code><span class="n">nc</span><span class="o">.</span><span class="n">get_previous_job_runs</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">time_segments</span><span class="p">)</span>
+</code></pre></div>
 
               
             </article>
@@ -979,26 +1036,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-      
-        
-        <a href="api.html" class="md-footer__link md-footer__link--next" aria-label="Next: Hyperplane API" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Hyperplane API
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
