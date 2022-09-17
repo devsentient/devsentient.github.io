@@ -1,1 +1,0 @@
-# devsentient.github.io
